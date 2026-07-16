@@ -1,10 +1,51 @@
 export const runtime = "edge";
 
+// Best-effort per-isolate rate limit. Cloudflare may spin up multiple
+// isolates, so this is not a hard guarantee — it stops casual abuse and
+// runaway clients without needing KV. For stronger protection add
+// Cloudflare Turnstile or a WAF rate-limiting rule.
+const WINDOW_MS = 60_000;
+const MAX_PER_WINDOW = 5;
+const hits = new Map<string, { count: number; windowStart: number }>();
+
+function rateLimited(ip: string): boolean {
+  const now = Date.now();
+  const entry = hits.get(ip);
+  if (!entry || now - entry.windowStart > WINDOW_MS) {
+    hits.set(ip, { count: 1, windowStart: now });
+    return false;
+  }
+  entry.count++;
+  return entry.count > MAX_PER_WINDOW;
+}
+
 export async function POST(request: Request): Promise<Response> {
-  const body = await request.json().catch(() => ({}));
+  const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
+  if (rateLimited(ip)) {
+    return Response.json(
+      { error: "Too many requests. Please try again in a minute." },
+      { status: 429 }
+    );
+  }
+
+  const raw = await request.text().catch(() => "");
+  if (raw.length > 1_000) {
+    return Response.json({ error: "Request too large." }, { status: 413 });
+  }
+
+  let body: { email?: unknown } = {};
+  try {
+    body = JSON.parse(raw);
+  } catch {
+    // fall through — validation below rejects
+  }
   const email: unknown = body?.email;
 
-  if (typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+  if (
+    typeof email !== "string" ||
+    email.length > 254 ||
+    !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
+  ) {
     return Response.json({ error: "Valid email required." }, { status: 400 });
   }
 
