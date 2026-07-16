@@ -4,22 +4,34 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A **Claude Desktop plugin** for solo attorneys — five skills (slash commands) that read local matter files and Gmail to draft legal documents. There is no runtime code, no MCP server, and no backend. The product is entirely content: markdown skill files, JSON manifests, and a Next.js landing page.
+A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — five skills) plus each of those five skills as a standalone plugin. There is no runtime code, no MCP server, and no backend. The product is entirely content: markdown skill files, JSON manifests, and a Next.js landing page.
 
 ## Repo layout
 
 ```
-plugin/           The installable plugin (packaged into .zip bundle)
-  .claude-plugin/plugin.json   Manifest validated by scripts/validate-plugin.mjs
-  .mcp.json                    Declares gmail + filesystem connector requirements
-  manifest.json                Plugin metadata (manifest_version, server entry)
-  prompts/system-prompt.md     Master system prompt — ethical guardrails live here
-  skills/*/SKILL.md            One directory per skill; YAML frontmatter + markdown body
-site/             Next.js landing page (Cloudflare Pages)
-  app/api/subscribe/route.ts   Edge route: email capture → Kit API
+.claude-plugin/marketplace.json  Marketplace manifest — every installable plugin, in curated order
+
+solo-attorney-starter-kit/       Flagship bundle (all five skills; also packaged into the release .zip)
+  .claude-plugin/plugin.json     Identity manifest (kebab-case name, semver version)
+  .mcp.json                      Declares gmail + google-calendar + filesystem connectors
+  prompts/system-prompt.md       Master system prompt — ethical guardrails live here
+  skills/*/SKILL.md              One directory per skill; YAML frontmatter + markdown body
+
+new-matter-organizer/            Standalone plugins — one skill each, same layout:
+engagement-letter-drafter/       .claude-plugin/plugin.json, .mcp.json, README.md,
+court-deadline-calendar/         skills/<skill-name>/SKILL.md
+billing-narrative-drafter/
+meeting-prep-brief/
+
+site/                            Next.js landing page (Cloudflare Pages)
+  app/api/subscribe/route.ts     Edge route: email capture → Kit API
+
 scripts/
-  validate-plugin.mjs          Validates plugin/ structure before packing
-docs/                          Technical spec (App - Solo Attorney Claude Plugin - Technical.md)
+  validate-plugin.mjs            Validates marketplace.json + every listed plugin
+  write-mcp-configs.mjs          Regenerates each plugin's .mcp.json (source of truth for connectors)
+  release-check.mjs              Preflight for `npm run release`
+
+docs/                            Technical spec + planned-plugins.json (unbuilt catalog entries)
 ```
 
 ## Commands
@@ -27,66 +39,82 @@ docs/                          Technical spec (App - Solo Attorney Claude Plugin
 All commands run from the repo root.
 
 ```bash
-# Validate plugin structure (manifest, skill dirs, SKILL.md presence)
-npm run validate
-
-# Full build: validate → pack → SHA-256 → copy to site/public/downloads/
-npm run build
-
-# Pack only (skips validate)
-npm run pack
-
-# Cut a GitHub release (runs build first; requires RELEASE.md at repo root)
-npm run release
-
-# Remove build artifacts
-npm run clean
-
-# List plugin files (excludes node_modules)
-npm run tree
+npm run validate       # validate marketplace.json + all listed plugins
+node scripts/validate-plugin.mjs <dir>   # validate a single plugin dir
+npm run mcp:write      # regenerate every plugin's .mcp.json from scripts/write-mcp-configs.mjs
+npm run build          # validate → pack starter-kit zip → SHA-256 → copy to site/public/downloads/
+npm run pack           # pack only (skips validate)
+npm run clean          # remove build artifacts
+npm run tree           # list all plugin files
 
 # Landing page
 npm run site:install   # npm install --prefix site
 npm run site:dev       # next dev
-npm run site:build     # next build
-npm run site:preview   # next start (preview the production build locally)
+npm run site:build     # npx @cloudflare/next-on-pages → .vercel/output/static
+npm run site:preview   # next start
+npm run site:deploy    # build + wrangler pages deploy to Cloudflare Pages
 ```
 
-## Plugin format
+## Marketplace conventions (mirrors claude-for-legal CI invariants)
 
-The bundle format is `.zip` (a ZIP renamed; previously `.mcpb`). It uses the **plugin variant** (not standalone) — no bundled MCP server.
+`scripts/validate-plugin.mjs` enforces these — keep them intact when adding plugins:
 
-Two manifests serve different purposes:
-- `plugin/.claude-plugin/plugin.json` — the identity manifest the validator and Claude Desktop read (`name` must be kebab-case)
-- `plugin/manifest.json` — display metadata and server entry point declaration
+- Marketplace and plugin names are kebab-case: `^[a-z0-9][a-z0-9-]{1,63}$` (I11)
+- No duplicate plugin names in marketplace.json (I2)
+- Descriptions are 10–2000 chars with no leading/trailing whitespace (I3)
+- Every `source` is a local `"./<dir>"` path that exists and contains `.claude-plugin/plugin.json` (I8); no shell metacharacters or `..` (I9)
+- Marketplace entry `name`/`description` must exactly match that plugin's own `plugin.json` (sync convention)
+- Each `skills/<name>/SKILL.md` has frontmatter whose `name` matches its directory and a non-empty `description`, plus the compliance markers (below)
+- Root `package.json` version must match `solo-attorney-starter-kit/.claude-plugin/plugin.json` version (the zip release channel derives its tag/filename from package.json)
 
-The validator (`scripts/validate-plugin.mjs`) checks:
-- `.claude-plugin/plugin.json` is valid JSON with a kebab-case `name`
-- Each `skills/*/` subdirectory contains a `SKILL.md`
-- `agents/`, `commands/`, `hooks/` (if present) contain files with the expected extension
+**Adding a plugin:** create the top-level dir with the full layout, add its connectors to `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`, then add the marketplace.json entry. Planned-but-unbuilt plugins live in `docs/planned-plugins.json` — never in marketplace.json (that would break I8).
+
+## Distribution channels
+
+1. **Marketplace (primary):** users add the repo (`/plugin marketplace add protomated/protomated-plugins-official` or Cowork → Customize → Plugins → Browse plugins) and install any plugin. Git-native — no packaging step.
+2. **Zip (secondary, Starter Kit only):** `npm run build` packs `solo-attorney-starter-kit/` into `solo-attorney-starter-kit-v$version.zip` + SHA-256, copied to `site/public/downloads/` and attached to GitHub Releases.
+
+## Releasing (zip channel)
+
+1. Bump `version` in root `package.json` **and** `solo-attorney-starter-kit/.claude-plugin/plugin.json` (the validator enforces sync).
+2. Run `npm run release` — preflight (`scripts/release-check.mjs`: clean tree, on `main`, tag doesn't exist, validation passes), then tags `v$version` and pushes.
+3. CI (`.github/workflows/release.yml`) fires on the tag, runs `npm run build`, and creates the GitHub Release with auto-generated notes and the `.zip`/`.sha256` artifacts.
+
+Marketplace installs need no release — they track `main`.
+
+## CI workflows
+
+| File | Trigger | What it does |
+|---|---|---|
+| `.github/workflows/validate.yml` | Push or PR to `main` | Runs `npm run validate` |
+| `.github/workflows/release.yml` | Push of `v*.*.*` tag | Runs `npm run build`, creates GitHub Release |
+| `.github/workflows/site.yml` | (see file) | Deploys the landing page to Cloudflare Pages |
 
 ## Skill files
 
 Each `SKILL.md` has YAML frontmatter:
+
 ```yaml
 ---
-name: skill-name
+name: skill-name          # must match its directory name
 description: shown to attorney in /skills list
 argument-hint: "[hint shown in Claude Desktop]"
 ---
 ```
 
-The body instructs Claude what tools to call (via the built-in Gmail and Filesystem connectors), what output format to produce, and what confirmation to request before any state-changing action.
+The body instructs Claude what tools to call (via the built-in Gmail, Google Calendar, and Filesystem connectors), what output format to produce, and what confirmation to request before any state-changing action.
 
-**`/intake-summary` must run first on any new matter** — it creates `intake-summary.md`, the anchor file all other skills read.
+The five skills are `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, and `meeting-prep`. **`/new-matter-organizer` must run first on any new matter** — it creates `matter-profile.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
+
+The starter kit's `skills/` are the canonical copies; the standalone plugins carry verbatim copies. When editing a SKILL.md, update it in **both** the starter kit and its standalone plugin.
 
 ## Compliance constraints — non-negotiable
 
-These rules are enforced in `prompts/system-prompt.md` and repeated in every `SKILL.md`. Do not weaken them:
+Enforced in `solo-attorney-starter-kit/prompts/system-prompt.md` and repeated in every `SKILL.md`. The validator checks the markers. Do not weaken them:
 
-1. **Confirmation gating**: Claude must show the attorney exactly what it will do and get explicit in-conversation confirmation before sending email or writing any file.
-2. **Required output wrapper**: Every skill output must begin and end with the prescribed attorney-review header/footer (see `prompts/system-prompt.md` for exact text).
-3. **Plan-tier warning**: The system prompt must warn that consumer-tier Claude (claude.ai Personal / Pro) must not be used with client-privileged content.
+1. **Confirmation gating**: Claude must show the attorney exactly what it will do and get explicit in-conversation confirmation before sending email, creating calendar events, or writing any file.
+2. **Required output wrapper**: every skill output must begin with `AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED` and end with the `Not legal advice` footer (exact text in the system prompt).
+3. **Plan-tier warning**: consumer-tier Claude (claude.ai Personal / Pro) must not be used with client-privileged content.
 
 ## Site environment variables
 
@@ -96,15 +124,12 @@ Required for local site development and Cloudflare Pages deployment (see `site/.
 |---|---|
 | `KIT_API_KEY` | Kit (ConvertKit) API key — email capture |
 | `KIT_FORM_ID` | Kit form ID |
-| `PUBLIC_DOWNLOAD_URL` | URL returned to the user after email capture; defaults to `/downloads/solo-attorney-assistant.mcpb` |
+| `PUBLIC_DOWNLOAD_URL` | URL returned to the user after email capture |
 
-The plugin itself has no environment variables.
-
-The site deploys to Cloudflare Pages via `@cloudflare/next-on-pages`. The `/api/subscribe` route runs as a Cloudflare edge function.
+The plugins themselves have no environment variables. The site deploys to Cloudflare Pages via `@cloudflare/next-on-pages`; `/api/subscribe` calls the Kit v4 API and returns `{ ok: true, downloadUrl }` on success.
 
 ## Notes
 
-- `plugin/manifest.json` declares `server/entry_point: "server/index.js"` but `plugin/server/index.js` does not exist — the plugin variant does not require a bundled server, so this field is inert.
-- `plugin/README.md` and `plugin/CONNECTORS.md` are end-user documentation included in the ZIP bundle; they are not internal developer docs.
-- The root `.mcp.json` mirrors `plugin/.mcp.json`; both declare the gmail and filesystem connector requirements.
-- `npm run release` passes `--notes-file RELEASE.md` to `gh release create` — create `RELEASE.md` at repo root before running it.
+- Each plugin's `.mcp.json` declares connector requirements with intentionally blank `url` fields — Gmail, Google Calendar, and Filesystem are built into Claude Desktop and managed by Anthropic. Never hand-edit these files; change `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`.
+- The root `.mcp.json` is a local development MCP config (unrelated to the plugins) and must not contain committed credentials — keep tokens in env vars or gitignore the file.
+- Plugin READMEs and `solo-attorney-starter-kit/CONNECTORS.md` are end-user documentation; they are not internal developer docs.
