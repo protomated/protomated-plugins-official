@@ -1,8 +1,0 @@
-{
-  "name": "solo-attorney-assistant",
-  "version": "1.0.0",
-  "description": "A solo attorney operations assistant for Claude Desktop. Drafts client status updates, demand letters, engagement letters, and intake summaries — all from your local matter files and Gmail.",
-  "author": {
-    "name": "Protomated"
-  }
-}
