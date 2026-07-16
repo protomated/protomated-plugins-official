@@ -1,0 +1,64 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "protomated-plugins-official",
+  "description": "Free Claude Cowork plugins for solo and small-firm attorneys, built by Protomated. Covers matter intake, client communications, court deadlines, engagement letters, billing, and practice operations. Every output requires attorney review before use.",
+  "owner": {
+    "name": "Protomated"
+  },
+  "plugins": [
+    {
+      "name": "solo-attorney-starter-kit",
+      "displayName": "Solo Attorney Starter Kit",
+      "source": "./solo-attorney-starter-kit",
+      "description": "Five pre-built skills for solo attorneys: new matter organizer, court deadline reasoning, engagement letter drafter, billing narrative drafter, and meeting prep brief. Reads your local matter files, Gmail, and Google Calendar. All output requires attorney review before use.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "new-matter-organizer",
+      "displayName": "New Matter Organizer",
+      "source": "./new-matter-organizer",
+      "description": "Set up a new client matter. Runs a structured intake, drafts a conflict-check memo, creates a matter profile, and generates a matter-opening checklist. Run this first on every new matter — the matter profile it creates is the anchor file other skills read from.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "engagement-letter-drafter",
+      "displayName": "Engagement Letter Drafter",
+      "source": "./engagement-letter-drafter",
+      "description": "Draft a retainer and engagement letter for a new client from intake data. Covers scope of representation, fee structure, client obligations, and required ethical disclosures. Use when a new client is ready to retain the firm.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "court-deadline-calendar",
+      "displayName": "Court Deadline Calendar",
+      "source": "./court-deadline-calendar",
+      "description": "Surface upcoming court deadlines and filing windows for a matter. Reads matter files and your calendar to identify response deadlines, filing dates, and statute of limitations concerns. Use before each week's work or when starting a new matter.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "billing-narrative-drafter",
+      "displayName": "Billing Narrative Drafter",
+      "source": "./billing-narrative-drafter",
+      "description": "Turn raw time-entry notes into polished, client-ready billing narratives. Reads your time entries from a matter folder or accepts entries directly. Use when preparing an invoice or cleaning up billing notes before they go to a client.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "meeting-prep-brief",
+      "displayName": "Meeting Prep Brief",
+      "source": "./meeting-prep-brief",
+      "description": "Generate a one-page pre-meeting brief from local matter files. Use before a client meeting, deposition, mediation session, settlement conference, or court appearance — when you need a fast, structured summary of where the matter stands and what you need to accomplish.",
+      "author": {
+        "name": "Protomated"
+      }
+    }
+  ]
+}

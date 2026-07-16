@@ -1,0 +1,68 @@
+{
+  "_comment": "Catalog entries not yet built. Move an entry into .claude-plugin/marketplace.json only when its plugin directory exists and validates — every marketplace `source` must point at a directory containing .claude-plugin/plugin.json (invariant I8). Names/descriptions below are the canonical CP-catalog wording.",
+  "planned": [
+    {
+      "name": "bar-compliant-marketing-reviewer",
+      "displayName": "Bar-Compliant Marketing Reviewer",
+      "source": "./bar-compliant-marketing-reviewer",
+      "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "ai-use-policy-generator",
+      "displayName": "AI Use Policy Generator",
+      "source": "./ai-use-policy-generator",
+      "description": "Generates a tailored AI use policy for your firm covering client confidentiality, competence obligations, disclosure requirements, and acceptable-use guardrails — aligned to your jurisdiction's ethics rules.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "consult-prep-brief-generator",
+      "displayName": "Consult Prep Brief Generator",
+      "source": "./consult-prep-brief-generator",
+      "description": "Turns a prospective client intake form or email thread into a focused consultation brief: key facts, likely claims, jurisdiction notes, and the three questions most worth asking in the first meeting.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "demand-letter-drafter",
+      "displayName": "Demand Letter Drafter",
+      "source": "./demand-letter-drafter",
+      "description": "Drafts a practice-area-specific demand letter from your matter files: factual summary, legal basis, relief demanded, and response deadline. Requires attorney review before sending.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "estate-planning-assembly",
+      "displayName": "Estate Planning Assembly",
+      "source": "./estate-planning-assembly",
+      "description": "Assembles a first-draft estate planning document set — will, durable power of attorney, healthcare directive — from a completed intake questionnaire. All drafts require attorney review before execution.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "immigration-filing-drafter",
+      "displayName": "Immigration Filing Drafter",
+      "source": "./immigration-filing-drafter",
+      "description": "Drafts cover letters, personal statements, and supporting narratives for common immigration filings from your client intake notes. Attorney review required before submission.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "spanish-intake-skill",
+      "displayName": "Spanish Intake Skill",
+      "source": "./spanish-intake-skill",
+      "description": "Conducts a bilingual (English/Spanish) client intake, produces a structured intake summary in English for the attorney's file, and drafts a Spanish-language acknowledgment for the client.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "ai-tool-hygiene-audit",
+      "displayName": "AI Tool Hygiene Audit",
+      "source": "./ai-tool-hygiene-audit",
+      "description": "Audits your firm's current AI tool usage against bar ethics rules — confidentiality, competence, supervision, and disclosure — and produces a prioritized remediation checklist.",
+      "author": { "name": "Protomated" }
+    },
+    {
+      "name": "legal-billing-tracker",
+      "displayName": "Legal Billing Tracker",
+      "source": "./legal-billing-tracker",
+      "description": "Tracks billable time across matters, surfaces unbilled work from your matter notes, and produces a billing summary ready for invoice generation.",
+      "author": { "name": "Protomated" }
+    }
+  ]
+}
