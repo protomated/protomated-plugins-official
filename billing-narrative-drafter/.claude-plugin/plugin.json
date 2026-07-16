@@ -1,0 +1,8 @@
+{
+  "name": "billing-narrative-drafter",
+  "version": "1.0.0",
+  "description": "Turn raw time-entry notes into polished, client-ready billing narratives. Reads your time entries from a matter folder or accepts entries directly. Use when preparing an invoice or cleaning up billing notes before they go to a client.",
+  "author": {
+    "name": "Protomated"
+  }
+}

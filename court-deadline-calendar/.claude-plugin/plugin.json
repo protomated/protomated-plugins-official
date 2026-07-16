@@ -1,0 +1,8 @@
+{
+  "name": "court-deadline-calendar",
+  "version": "1.0.0",
+  "description": "Surface upcoming court deadlines and filing windows for a matter. Reads matter files and your calendar to identify response deadlines, filing dates, and statute of limitations concerns. Use before each week's work or when starting a new matter.",
+  "author": {
+    "name": "Protomated"
+  }
+}

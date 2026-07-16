@@ -1,0 +1,8 @@
+{
+  "name": "new-matter-organizer",
+  "version": "1.0.0",
+  "description": "Set up a new client matter. Runs a structured intake, drafts a conflict-check memo, creates a matter profile, and generates a matter-opening checklist. Run this first on every new matter — the matter profile it creates is the anchor file other skills read from.",
+  "author": {
+    "name": "Protomated"
+  }
+}

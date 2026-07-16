@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "gmail": {
+      "type": "http",
+      "url": ""
+    },
+    "google-calendar": {
+      "type": "http",
+      "url": ""
+    },
+    "filesystem": {
+      "type": "http",
+      "url": ""
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "engagement-letter-drafter",
+  "version": "1.0.0",
+  "description": "Draft a retainer and engagement letter for a new client from intake data. Covers scope of representation, fee structure, client obligations, and required ethical disclosures. Use when a new client is ready to retain the firm.",
+  "author": {
+    "name": "Protomated"
+  }
+}

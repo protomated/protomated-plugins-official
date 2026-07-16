@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "type": "http",
+      "url": ""
+    },
+    "gmail": {
+      "type": "http",
+      "url": ""
+    }
+  }
+}
