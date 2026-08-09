@@ -1,0 +1,13 @@
+{
+  "name": "legal-billing",
+  "display_name": "Legal Billing and Time Tracker",
+  "version": "1.0.0",
+  "description": "Track billable hours, generate invoices, manage trust accounts, and check revenue — all by chatting naturally. Free replacement for Clio and PracticePanther billing modules for solo attorneys.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://protomated.com/templates/legal-billing-time-tracker/",
+  "license": "MIT",
+  "keywords": ["legal", "billing", "time-tracking", "trust-accounting", "invoicing", "attorney", "law-firm"]
+}

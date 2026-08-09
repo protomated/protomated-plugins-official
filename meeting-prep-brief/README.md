@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/meeting-prep`. Produces a one-page pre-meeting brief from your matter folder and recent email — tailored to client check-ins, depositions, mediations, settlement conferences, and court appearances. Read-only: writes nothing.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all five attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 

@@ -56,13 +56,6 @@
       "source": "./ai-tool-hygiene-audit",
       "description": "Audits your firm's current AI tool usage against bar ethics rules — confidentiality, competence, supervision, and disclosure — and produces a prioritized remediation checklist.",
       "author": { "name": "Protomated" }
-    },
-    {
-      "name": "legal-billing-tracker",
-      "displayName": "Legal Billing Tracker",
-      "source": "./legal-billing-tracker",
-      "description": "Tracks billable time across matters, surfaces unbilled work from your matter notes, and produces a billing summary ready for invoice generation.",
-      "author": { "name": "Protomated" }
     }
   ]
 }

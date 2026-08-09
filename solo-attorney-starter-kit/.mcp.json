@@ -4,11 +4,11 @@
       "type": "http",
       "url": ""
     },
-    "google-calendar": {
+    "filesystem": {
       "type": "http",
       "url": ""
     },
-    "filesystem": {
+    "google-calendar": {
       "type": "http",
       "url": ""
     }

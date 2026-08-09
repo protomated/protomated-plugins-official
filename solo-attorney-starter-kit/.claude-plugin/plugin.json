@@ -1,7 +1,7 @@
 {
   "name": "solo-attorney-starter-kit",
-  "version": "1.1.0",
-  "description": "Five pre-built skills for solo attorneys: new matter organizer, court deadline reasoning, engagement letter drafter, billing narrative drafter, and meeting prep brief. Reads your local matter files, Gmail, and Google Calendar. All output requires attorney review before use.",
+  "version": "2.2.0",
+  "description": "A solo attorney operations assistant for Claude Desktop. Eight skills: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, new-matter organizer, flat-fee repricing calculator, and verified-source legal research memo drafter — from your local files, Gmail, and Google Calendar.",
   "author": {
     "name": "Protomated"
   }

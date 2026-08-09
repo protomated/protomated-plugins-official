@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/billing-narrative`. Turns raw time-entry notes into polished, client-ready billing narratives — specific, defensible, and free of block-billing flags.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all five attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 

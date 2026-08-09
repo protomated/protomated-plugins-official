@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/court-deadline`. Surfaces upcoming court deadlines and filing windows for a matter — response deadlines, filing dates, and statute-of-limitations concerns — from your matter files and calendar.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all five attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 

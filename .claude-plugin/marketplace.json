@@ -10,7 +10,7 @@
       "name": "solo-attorney-starter-kit",
       "displayName": "Solo Attorney Starter Kit",
       "source": "./solo-attorney-starter-kit",
-      "description": "Five pre-built skills for solo attorneys: new matter organizer, court deadline reasoning, engagement letter drafter, billing narrative drafter, and meeting prep brief. Reads your local matter files, Gmail, and Google Calendar. All output requires attorney review before use.",
+      "description": "A solo attorney operations assistant for Claude Desktop. Eight skills: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, new-matter organizer, flat-fee repricing calculator, and verified-source legal research memo drafter — from your local files, Gmail, and Google Calendar.",
       "author": {
         "name": "Protomated"
       }
@@ -56,6 +56,15 @@
       "displayName": "Meeting Prep Brief",
       "source": "./meeting-prep-brief",
       "description": "Generate a one-page pre-meeting brief from local matter files. Use before a client meeting, deposition, mediation session, settlement conference, or court appearance — when you need a fast, structured summary of where the matter stands and what you need to accomplish.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "legal-billing",
+      "displayName": "Legal Billing Tracker",
+      "source": "./legal-billing-tracker",
+      "description": "Track billable hours, generate invoices, manage trust accounts, and check revenue — all by chatting naturally. Free replacement for Clio and PracticePanther billing modules for solo attorneys.",
       "author": {
         "name": "Protomated"
       }

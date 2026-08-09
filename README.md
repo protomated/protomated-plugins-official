@@ -4,7 +4,7 @@ Free Claude Cowork plugins for solo and small-firm attorneys, built by Protomate
 
 > **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in 3 minutes. This README is the full reference.
 
-The **Solo Attorney Starter Kit** is the flagship plugin: five skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, and draft engagement letters, billing narratives, and pre-meeting briefs — in under five minutes of setup. Each of the five skills is also available as a standalone plugin.
+The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Five of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules.
 
 Distributed free by [Protomated](https://protomated.com) at [protomated.com/resources](https://protomated.com/resources).
 
@@ -41,12 +41,13 @@ See [`solo-attorney-starter-kit/README.md`](solo-attorney-starter-kit/README.md)
 
 | Plugin | Skills | Connectors |
 |---|---|---|
-| `solo-attorney-starter-kit` | All five below | Gmail, Google Calendar, Filesystem |
+| `solo-attorney-starter-kit` | All eight skills (see below) | Gmail, Google Calendar, Filesystem |
 | `new-matter-organizer` | `/new-matter-organizer` | Filesystem |
 | `engagement-letter-drafter` | `/engagement-letter` | Filesystem, Gmail |
 | `court-deadline-calendar` | `/court-deadline` | Filesystem, Google Calendar |
 | `billing-narrative-drafter` | `/billing-narrative` | Filesystem |
 | `meeting-prep-brief` | `/meeting-prep` | Filesystem, Gmail |
+| `legal-billing` | `/legal-billing`, `/legal-billing:log-time`, `/legal-billing:invoice-client`, `/legal-billing:trust-entry`, `/legal-billing:billing-review` | Google (via remote MCP) |
 
 Plugins that are planned but not yet built are parked in [`docs/planned-plugins.json`](docs/planned-plugins.json) — they are added to `marketplace.json` only once their directory exists.
 
@@ -58,7 +59,7 @@ Plugins that are planned but not yet built are parked in [`docs/planned-plugins.
 .claude-plugin/
   marketplace.json             Marketplace manifest — lists every installable plugin
 
-solo-attorney-starter-kit/     Flagship bundle (all five skills; also packaged into .zip)
+solo-attorney-starter-kit/     Flagship bundle (all eight skills; also packaged into .zip)
   .claude-plugin/plugin.json   Identity manifest
   .mcp.json                    Declares Gmail + Google Calendar + Filesystem connectors
   prompts/system-prompt.md     Master system prompt — ethical guardrails live here
@@ -69,6 +70,9 @@ engagement-letter-drafter/     same layout: .claude-plugin/plugin.json,
 court-deadline-calendar/       .mcp.json, README.md, skills/<name>/SKILL.md
 billing-narrative-drafter/
 meeting-prep-brief/
+
+legal-billing-tracker/         Standalone plugin (name: legal-billing) — billing,
+                                invoicing, and trust accounting via a remote MCP server
 
 site/             Next.js landing page (Cloudflare Pages)
   app/api/subscribe/route.ts   Edge route: email capture → Kit API
@@ -91,11 +95,15 @@ docs/             Technical specifications + planned-plugins.json
 
 | Skill | What it does |
 |---|---|
+| `/intake-summary` | Processes new-client intake into a structured summary — must run first on any new matter, creates the anchor file other skills read from |
 | `/new-matter-organizer` | Runs structured intake, drafts conflict-check memo, creates matter profile and opening checklist — run this first on every new matter |
 | `/court-deadline` | Surfaces upcoming court deadlines and filing windows from matter files and calendar |
 | `/engagement-letter` | Drafts a retainer and engagement letter from matter intake data |
 | `/billing-narrative` | Turns raw time-entry notes into polished, client-ready billing narratives |
 | `/meeting-prep` | Produces a one-page brief for depositions, mediations, hearings, and client check-ins |
+| `/flat-fee-calculator` | Reprices flat fees using AI-adjusted scenario ranking |
+| `/research-memo` | Drafts a verified-source legal research memo, citing only sources it can confirm |
+| `/legal-billing` | Tracks billable hours, invoices, trust accounts, and revenue by chatting naturally (standalone `legal-billing` plugin only) |
 
 ---
 
@@ -146,8 +154,8 @@ Copy `site/.env.example` to `site/.env.local` for local development. The plugins
 Push a semver tag — CI does the rest:
 
 ```bash
-git tag v1.1.0
-git push origin v1.1.0
+git tag v2.2.0
+git push origin v2.2.0
 ```
 
 The release workflow validates, builds, checksums, and publishes a GitHub Release with the `.zip` and `.sha256` attached. Release notes are generated automatically from commits since the previous tag.

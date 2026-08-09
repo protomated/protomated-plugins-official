@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — five skills) plus each of those five skills as a standalone plugin. There is no runtime code, no MCP server, and no backend. The product is entirely content: markdown skill files, JSON manifests, and a Next.js landing page.
+A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — eight skills), five of those eight skills as standalone plugins, and the Legal Billing Tracker (a separate product with its own remote MCP server). There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
 
 ## Repo layout
 
 ```
 .claude-plugin/marketplace.json  Marketplace manifest — every installable plugin, in curated order
 
-solo-attorney-starter-kit/       Flagship bundle (all five skills; also packaged into the release .zip)
+solo-attorney-starter-kit/       Flagship bundle (all eight skills; also packaged into the release .zip)
   .claude-plugin/plugin.json     Identity manifest (kebab-case name, semver version)
   .mcp.json                      Declares gmail + google-calendar + filesystem connectors
   prompts/system-prompt.md       Master system prompt — ethical guardrails live here
@@ -22,6 +22,10 @@ engagement-letter-drafter/       .claude-plugin/plugin.json, .mcp.json, README.m
 court-deadline-calendar/         skills/<skill-name>/SKILL.md
 billing-narrative-drafter/
 meeting-prep-brief/
+
+legal-billing-tracker/           Standalone plugin (plugin.json name: legal-billing) — a
+                                  separate product, not split from the starter kit. Uses a
+                                  hosted remote MCP server instead of blank-url connectors.
 
 site/                            Next.js landing page (Cloudflare Pages)
   app/api/subscribe/route.ts     Edge route: email capture → Kit API
@@ -104,9 +108,11 @@ argument-hint: "[hint shown in Claude Desktop]"
 
 The body instructs Claude what tools to call (via the built-in Gmail, Google Calendar, and Filesystem connectors), what output format to produce, and what confirmation to request before any state-changing action.
 
-The five skills are `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, and `meeting-prep`. **`/new-matter-organizer` must run first on any new matter** — it creates `matter-profile.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
+The starter kit's eight skills are `intake-summary`, `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`, `flat-fee-calculator`, and `research-memo`. Five of these (`new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`) also ship as standalone plugins; `intake-summary`, `flat-fee-calculator`, and `research-memo` currently ship only inside the bundle. **`/new-matter-organizer` must run first on any new matter** — it creates `matter-profile.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
 
 The starter kit's `skills/` are the canonical copies; the standalone plugins carry verbatim copies. When editing a SKILL.md, update it in **both** the starter kit and its standalone plugin.
+
+`legal-billing-tracker/` is not split from the starter kit — it mirrors `protomated/claude-legal-billing-and-time-tracker`'s `cowork-plugin/` directory. When that upstream repo changes, re-sync this copy manually; there is no shared generator between the two repos.
 
 ## Compliance constraints — non-negotiable
 

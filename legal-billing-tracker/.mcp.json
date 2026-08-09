@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "legal-billing": {
+      "type": "http",
+      "url": "https://billing-mcp.protomated.com/mcp"
+    }
+  }
+}

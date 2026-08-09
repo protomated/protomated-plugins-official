@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/engagement-letter`. Drafts a retainer and engagement letter from intake data — scope of representation, fee structure, client obligations, and required ethical disclosures.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all five attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 

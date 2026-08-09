@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/new-matter-organizer`. Runs a structured intake, drafts a conflict-check memo, creates `matter-profile.md`, and generates a matter-opening checklist. The matter profile is the anchor file the other Protomated attorney plugins read from.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all five attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 

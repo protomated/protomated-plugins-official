@@ -1,6 +1,6 @@
 {
   "name": "protomated-plugins-official",
-  "version": "1.1.0",
+  "version": "2.2.0",
   "description": "Protomated plugin marketplace — Claude plugins for solo attorneys",
   "private": true,
   "scripts": {
@@ -13,7 +13,7 @@
     "release:check": "node scripts/release-check.mjs",
     "release": "npm run release:check && git tag v$npm_package_version && git push origin v$npm_package_version",
     "clean": "rm -f ./*.zip ./*.zip.sha256",
-    "tree": "find solo-attorney-starter-kit new-matter-organizer engagement-letter-drafter court-deadline-calendar billing-narrative-drafter meeting-prep-brief -type f -not -path '*/node_modules/*' | sort",
+    "tree": "find solo-attorney-starter-kit new-matter-organizer engagement-letter-drafter court-deadline-calendar billing-narrative-drafter meeting-prep-brief legal-billing-tracker -type f -not -path '*/node_modules/*' | sort",
     "site:install": "npm install --prefix site",
     "site:dev": "npm run dev --prefix site",
     "site:build": "npm run build --prefix site",
