@@ -1,6 +1,6 @@
 {
   "name": "meeting-prep-brief",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate a one-page pre-meeting brief from local matter files. Use before a client meeting, deposition, mediation session, settlement conference, or court appearance — when you need a fast, structured summary of where the matter stands and what you need to accomplish.",
   "author": {
     "name": "Protomated"

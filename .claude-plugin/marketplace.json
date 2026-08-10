@@ -19,7 +19,7 @@
       "name": "new-matter-organizer",
       "displayName": "New Matter Organizer",
       "source": "./new-matter-organizer",
-      "description": "Set up a new client matter. Runs a structured intake, drafts a conflict-check memo, creates a matter profile, and generates a matter-opening checklist. Run this first on every new matter — the matter profile it creates is the anchor file other skills read from.",
+      "description": "Set up a new matter folder with the standard directory structure for the practice area, a starter task checklist, and file any existing documents by type. Run when opening a new client file. Works entirely inside your attached workspace folder. No files are written without attorney confirmation.",
       "author": {
         "name": "Protomated"
       }
@@ -28,7 +28,7 @@
       "name": "engagement-letter-drafter",
       "displayName": "Engagement Letter Drafter",
       "source": "./engagement-letter-drafter",
-      "description": "Draft a retainer and engagement letter for a new client from intake data. Covers scope of representation, fee structure, client obligations, and required ethical disclosures. Use when a new client is ready to retain the firm.",
+      "description": "Draft a retainer and engagement letter for a new client from intake data, using the firm's own saved template when one is available. Covers scope of representation, fee structure, client obligations, and required ethical disclosures. Use when a new client is ready to retain the firm.",
       "author": {
         "name": "Protomated"
       }
@@ -37,7 +37,7 @@
       "name": "court-deadline-calendar",
       "displayName": "Court Deadline Calendar",
       "source": "./court-deadline-calendar",
-      "description": "Surface upcoming court deadlines and filing windows for a matter. Reads matter files and your calendar to identify response deadlines, filing dates, and statute of limitations concerns. Use before each week's work or when starting a new matter.",
+      "description": "Compute a court or filing deadline from a trigger date and the rule the attorney provides. Shows step-by-step reasoning. Drafts a Google Calendar event for confirmation. Does NOT maintain a jurisdiction-specific rule database — the attorney supplies the rule every time. Use for response deadlines, appeal windows, statute-of-limitations calculations, and other one-off or complex date logic.",
       "author": {
         "name": "Protomated"
       }
@@ -46,7 +46,7 @@
       "name": "billing-narrative-drafter",
       "displayName": "Billing Narrative Drafter",
       "source": "./billing-narrative-drafter",
-      "description": "Turn raw time-entry notes into polished, client-ready billing narratives. Reads your time entries from a matter folder or accepts entries directly. Use when preparing an invoice or cleaning up billing notes before they go to a client.",
+      "description": "Draft a billing-code-appropriate time narrative and suggest a time increment from your rough notes, an email thread, or a description of work performed. Attorney confirms accuracy and time before billing. Paste into Clio, MyCase, PracticePanther, or any billing system. Use after completing any billable task when writing the time entry is slowing you down.",
       "author": {
         "name": "Protomated"
       }

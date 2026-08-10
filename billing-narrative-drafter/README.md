@@ -1,6 +1,6 @@
 # Billing Narrative Drafter
 
-Standalone plugin with one skill: `/billing-narrative`. Turns raw time-entry notes into polished, client-ready billing narratives — specific, defensible, and free of block-billing flags.
+Standalone plugin with one skill: `/billing-narrative`. Drafts a billing-code-appropriate time narrative and suggests a time increment from your rough notes, an email thread, or a description of work performed — specific, defensible, and free of block-billing flags.
 
 Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 

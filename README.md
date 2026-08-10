@@ -27,7 +27,7 @@ Distributed free by [Protomated](https://protomated.com) at [protomated.com/reso
 /plugin install solo-attorney-starter-kit@protomated-plugins-official
 ```
 
-**First run:** Open any matter folder, then run `/new-matter-organizer` to create the `matter-profile.md` anchor file that all other skills read from.
+**First run:** Open any matter folder, run `/new-matter-organizer` to set up the folder structure, then run `/intake-summary` to create the `intake-summary.md` anchor file that all other skills read from.
 
 ### Option 3 — Direct ZIP install (Starter Kit only)
 
@@ -96,10 +96,10 @@ docs/             Technical specifications + planned-plugins.json
 | Skill | What it does |
 |---|---|
 | `/intake-summary` | Processes new-client intake into a structured summary — must run first on any new matter, creates the anchor file other skills read from |
-| `/new-matter-organizer` | Runs structured intake, drafts conflict-check memo, creates matter profile and opening checklist — run this first on every new matter |
-| `/court-deadline` | Surfaces upcoming court deadlines and filing windows from matter files and calendar |
-| `/engagement-letter` | Drafts a retainer and engagement letter from matter intake data |
-| `/billing-narrative` | Turns raw time-entry notes into polished, client-ready billing narratives |
+| `/new-matter-organizer` | Sets up a new matter folder with the standard directory structure, a starter task checklist, and files existing documents by type — run this first on every new matter |
+| `/court-deadline` | Computes a court or filing deadline from a trigger date and the rule you provide, with step-by-step reasoning |
+| `/engagement-letter` | Drafts a retainer and engagement letter from matter intake data, using the firm's own saved template when available |
+| `/billing-narrative` | Drafts a billing-code-appropriate time narrative and suggests a time increment from rough notes |
 | `/meeting-prep` | Produces a one-page brief for depositions, mediations, hearings, and client check-ins |
 | `/flat-fee-calculator` | Reprices flat fees using AI-adjusted scenario ranking |
 | `/research-memo` | Drafts a verified-source legal research memo, citing only sources it can confirm |

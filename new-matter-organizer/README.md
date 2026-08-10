@@ -1,6 +1,6 @@
 # New Matter Organizer
 
-Standalone plugin with one skill: `/new-matter-organizer`. Runs a structured intake, drafts a conflict-check memo, creates `matter-profile.md`, and generates a matter-opening checklist. The matter profile is the anchor file the other Protomated attorney plugins read from.
+Standalone plugin with one skill: `/new-matter-organizer`. Sets up a new matter folder with the standard directory structure for the practice area, a starter task checklist, and files any existing documents by type. Run this first on every new matter.
 
 Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
@@ -8,7 +8,7 @@ Part of the [Protomated plugin marketplace](https://github.com/protomated/protom
 
 | Connector | Used for |
 |---|---|
-| Filesystem | Writes `matter-profile.md` and `matter-checklist.md` — only with your explicit confirmation |
+| Filesystem | Reads existing matter folders for naming consistency; writes the new matter folder tree, `tasks.md`, and sorts existing documents — only with your explicit confirmation |
 
 ## Compliance
 

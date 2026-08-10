@@ -1,7 +1,7 @@
 {
   "name": "new-matter-organizer",
-  "version": "1.0.0",
-  "description": "Set up a new client matter. Runs a structured intake, drafts a conflict-check memo, creates a matter profile, and generates a matter-opening checklist. Run this first on every new matter — the matter profile it creates is the anchor file other skills read from.",
+  "version": "1.1.0",
+  "description": "Set up a new matter folder with the standard directory structure for the practice area, a starter task checklist, and file any existing documents by type. Run when opening a new client file. Works entirely inside your attached workspace folder. No files are written without attorney confirmation.",
   "author": {
     "name": "Protomated"
   }
