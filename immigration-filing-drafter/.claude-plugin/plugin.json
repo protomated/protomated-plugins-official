@@ -1,0 +1,8 @@
+{
+  "name": "immigration-filing-drafter",
+  "version": "1.0.0",
+  "description": "An immigration filing drafting assistant that turns attorney-supplied case facts and the firm's own filing templates into narrative filing sections — support letters, cover letters, RFE-response outlines — and client status-update emails triggered by a reported case-status change. Never looks up or submits anything to USCIS, never invents a case fact, never predicts an outcome, and never computes a deadline; you review and finalize every draft before filing or sending.",
+  "author": {
+    "name": "Protomated"
+  }
+}

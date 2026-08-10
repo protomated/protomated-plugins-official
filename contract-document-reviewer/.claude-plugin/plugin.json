@@ -1,0 +1,8 @@
+{
+  "name": "contract-document-reviewer",
+  "version": "1.0.0",
+  "description": "A contract review assistant that reviews a contract clause-by-clause against a configurable playbook — flagging each clause GREEN, YELLOW, or RED with plain-English rationale and suggested redline language — using your firm's own playbook, or a generic clause playbook if none is attached. Never decides whether to sign or reject a contract, and never sends, files, or executes anything; attorney reviews and finalizes every position before use.",
+  "author": {
+    "name": "Protomated"
+  }
+}

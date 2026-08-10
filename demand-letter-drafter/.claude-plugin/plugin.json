@@ -1,0 +1,8 @@
+{
+  "name": "demand-letter-drafter",
+  "version": "1.0.0",
+  "description": "A demand-letter and client-correspondence drafter that populates your firm's own template with case facts and drafts plain-English client status updates — for solo and small-firm attorneys who draft near-identical correspondence by hand. Never sets a demand amount, never sends anything; attorney is author of record.",
+  "author": {
+    "name": "Protomated"
+  }
+}

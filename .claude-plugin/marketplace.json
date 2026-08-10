@@ -68,6 +68,42 @@
       "author": {
         "name": "Protomated"
       }
+    },
+    {
+      "name": "demand-letter-drafter",
+      "displayName": "Demand Letter Drafter",
+      "source": "./demand-letter-drafter",
+      "description": "A demand-letter and client-correspondence drafter that populates your firm's own template with case facts and drafts plain-English client status updates — for solo and small-firm attorneys who draft near-identical correspondence by hand. Never sets a demand amount, never sends anything; attorney is author of record.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "estate-planning-document-assembler",
+      "displayName": "Estate Planning Document Assembler",
+      "source": "./estate-planning-document-assembler",
+      "description": "An estate planning document assembler that populates a basic will, healthcare POA, financial POA, and HIPAA authorization from one intake pass — using your firm's templates, or generic placeholders if none are attached — for solo and small-firm estate planning attorneys who assemble near-identical document sets by hand. Never determines execution requirements or which documents a client needs; attorney reviews and finalizes every document before the client signs.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "immigration-filing-drafter",
+      "displayName": "Immigration Filing Drafter",
+      "source": "./immigration-filing-drafter",
+      "description": "An immigration filing drafting assistant that turns attorney-supplied case facts and the firm's own filing templates into narrative filing sections — support letters, cover letters, RFE-response outlines — and client status-update emails triggered by a reported case-status change. Never looks up or submits anything to USCIS, never invents a case fact, never predicts an outcome, and never computes a deadline; you review and finalize every draft before filing or sending.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "contract-document-reviewer",
+      "displayName": "Contract Document Reviewer",
+      "source": "./contract-document-reviewer",
+      "description": "A contract review assistant that reviews a contract clause-by-clause against a configurable playbook — flagging each clause GREEN, YELLOW, or RED with plain-English rationale and suggested redline language — using your firm's own playbook, or a generic clause playbook if none is attached. Never decides whether to sign or reject a contract, and never sends, files, or executes anything; attorney reviews and finalizes every position before use.",
+      "author": {
+        "name": "Protomated"
+      }
     }
   ]
 }

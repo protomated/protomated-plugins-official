@@ -1,0 +1,8 @@
+{
+  "name": "estate-planning-document-assembler",
+  "version": "1.0.0",
+  "description": "An estate planning document assembler that populates a basic will, healthcare POA, financial POA, and HIPAA authorization from one intake pass — using your firm's templates, or generic placeholders if none are attached — for solo and small-firm estate planning attorneys who assemble near-identical document sets by hand. Never determines execution requirements or which documents a client needs; attorney reviews and finalizes every document before the client signs.",
+  "author": {
+    "name": "Protomated"
+  }
+}

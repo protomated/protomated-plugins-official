@@ -23,27 +23,6 @@
       "author": { "name": "Protomated" }
     },
     {
-      "name": "demand-letter-drafter",
-      "displayName": "Demand Letter Drafter",
-      "source": "./demand-letter-drafter",
-      "description": "Drafts a practice-area-specific demand letter from your matter files: factual summary, legal basis, relief demanded, and response deadline. Requires attorney review before sending.",
-      "author": { "name": "Protomated" }
-    },
-    {
-      "name": "estate-planning-assembly",
-      "displayName": "Estate Planning Assembly",
-      "source": "./estate-planning-assembly",
-      "description": "Assembles a first-draft estate planning document set — will, durable power of attorney, healthcare directive — from a completed intake questionnaire. All drafts require attorney review before execution.",
-      "author": { "name": "Protomated" }
-    },
-    {
-      "name": "immigration-filing-drafter",
-      "displayName": "Immigration Filing Drafter",
-      "source": "./immigration-filing-drafter",
-      "description": "Drafts cover letters, personal statements, and supporting narratives for common immigration filings from your client intake notes. Attorney review required before submission.",
-      "author": { "name": "Protomated" }
-    },
-    {
       "name": "spanish-intake-skill",
       "displayName": "Spanish Intake Skill",
       "source": "./spanish-intake-skill",
