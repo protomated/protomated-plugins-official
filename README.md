@@ -4,7 +4,7 @@ Free Claude Cowork plugins for solo and small-firm attorneys, built by Protomate
 
 > **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in 3 minutes. This README is the full reference.
 
-The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Six of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Five further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, **Contract Document Reviewer**, and **Bar-Compliant Marketing Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
+The **Solo Attorney Starter Kit** is the flagship plugin: seven skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, and reprice flat fees — in under five minutes of setup. Five of the seven skills are also available as standalone plugins. **Research Memo Drafter** ships only as its own standalone plugin, not inside the starter kit. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Five further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, **Contract Document Reviewer**, and **Bar-Compliant Marketing Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
 
 Distributed free by [Protomated](https://protomated.com) at [protomated.com/resources](https://protomated.com/resources).
 
@@ -41,7 +41,7 @@ See [`solo-attorney-starter-kit/README.md`](solo-attorney-starter-kit/README.md)
 
 | Plugin | Skills | Connectors |
 |---|---|---|
-| `solo-attorney-starter-kit` | All eight skills (see below) | Gmail, Google Calendar, Filesystem |
+| `solo-attorney-starter-kit` | All seven bundled skills (see below) | Gmail, Google Calendar, Filesystem |
 | `new-matter-organizer` | `/new-matter-organizer` | Filesystem |
 | `engagement-letter-drafter` | `/engagement-letter` | Filesystem, Gmail |
 | `court-deadline-calendar` | `/court-deadline` | Filesystem, Google Calendar |
@@ -65,7 +65,7 @@ Plugins that are planned but not yet built are parked in [`docs/planned-plugins.
 .claude-plugin/
   marketplace.json             Marketplace manifest — lists every installable plugin
 
-solo-attorney-starter-kit/     Flagship bundle (all eight skills; also packaged into .zip)
+solo-attorney-starter-kit/     Flagship bundle (all seven bundled skills; also packaged into .zip)
   .claude-plugin/plugin.json   Identity manifest
   .mcp.json                    Declares Gmail + Google Calendar + Filesystem connectors
   prompts/system-prompt.md     Master system prompt — ethical guardrails live here
@@ -115,7 +115,7 @@ docs/             Technical specifications + planned-plugins.json
 | `/billing-narrative` | Drafts a billing-code-appropriate time narrative and suggests a time increment from rough notes |
 | `/meeting-prep` | Produces a one-page brief for depositions, mediations, hearings, and client check-ins |
 | `/flat-fee-calculator` | Reprices flat fees using AI-adjusted scenario ranking |
-| `/research-memo` | Drafts a verified-source legal research memo, citing only sources it can confirm |
+| `/research-memo` | Drafts a verified-source legal research memo, citing only sources it can confirm (standalone `research-memo-drafter` plugin only — not in the starter kit) |
 | `/legal-billing` | Tracks billable hours, invoices, trust accounts, and revenue by chatting naturally (standalone `legal-billing` plugin only) |
 
 ---
@@ -167,8 +167,8 @@ Copy `site/.env.example` to `site/.env.local` for local development. The plugins
 Push a semver tag — CI does the rest:
 
 ```bash
-git tag v2.2.0
-git push origin v2.2.0
+git tag v2.3.0
+git push origin v2.3.0
 ```
 
 The release workflow validates, builds, checksums, and publishes a GitHub Release with the `.zip` and `.sha256` attached. Release notes are generated automatically from commits since the previous tag.

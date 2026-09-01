@@ -4,14 +4,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — eight skills), six of those eight skills as standalone plugins, the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, and one more connector-free plugin (Bar-Compliant Marketing Reviewer) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
+A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — seven skills), five of those seven skills also as standalone plugins, the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, one more connector-free plugin (Bar-Compliant Marketing Reviewer) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo, and one skill (Research Memo Drafter) that ships **only** as its own standalone plugin, not inside the starter kit at all. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
 
 ## Repo layout
 
 ```
 .claude-plugin/marketplace.json  Marketplace manifest — every installable plugin, in curated order
 
-solo-attorney-starter-kit/       Flagship bundle (all eight skills; also packaged into the release .zip)
+solo-attorney-starter-kit/       Flagship bundle (all seven bundled skills; also packaged into the release .zip)
   .claude-plugin/plugin.json     Identity manifest (kebab-case name, semver version)
   .mcp.json                      Declares gmail + google-calendar + filesystem connectors
   prompts/system-prompt.md       Master system prompt — ethical guardrails live here
@@ -119,7 +119,7 @@ argument-hint: "[hint shown in Claude Desktop]"
 
 The body instructs Claude what tools to call (via the built-in Gmail, Google Calendar, and Filesystem connectors), what output format to produce, and what confirmation to request before any state-changing action.
 
-The starter kit's eight skills are `intake-summary`, `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`, `flat-fee-calculator`, and `research-memo`. Six of these (`new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`, `research-memo`) also ship as standalone plugins; `intake-summary` and `flat-fee-calculator` currently ship only inside the bundle. **`/new-matter-organizer` must run first on any new matter** — it sets up the folder structure that `/intake-summary` then populates with `intake-summary.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
+The starter kit's seven skills are `intake-summary`, `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`, and `flat-fee-calculator`. Five of these (`new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`) also ship as standalone plugins; `intake-summary` and `flat-fee-calculator` currently ship only inside the bundle. `research-memo` is **not** part of the starter kit at all — it ships only as its own standalone plugin, `research-memo-drafter`. **`/new-matter-organizer` must run first on any new matter** — it sets up the folder structure that `/intake-summary` then populates with `intake-summary.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
 
 The starter kit's `skills/` are the canonical copies; the standalone plugins carry verbatim copies. When editing a SKILL.md, update it in **both** the starter kit and its standalone plugin.
 

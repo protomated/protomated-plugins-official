@@ -2,8 +2,8 @@
   "manifest_version": "0.2",
   "name": "solo-attorney-starter-kit",
   "display_name": "Solo Attorney Claude Starter Kit",
-  "version": "2.2.0",
-  "description": "8 pre-built AI skills for solo attorneys: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, new-matter organizer, flat-fee repricing calculator, and verified-source legal research memo drafter. Reads your local matter files, Gmail, and Google Calendar. All output requires attorney review before use.",
+  "version": "2.3.0",
+  "description": "7 pre-built AI skills for solo attorneys: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, new-matter organizer, and flat-fee repricing calculator. Reads your local matter files, Gmail, and Google Calendar. All output requires attorney review before use.",
   "author": {
     "name": "Protomated",
     "url": "https://protomated.com"

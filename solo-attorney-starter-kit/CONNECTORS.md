@@ -50,6 +50,3 @@ Confirm your template's filename contains a word like "engagement," "retainer," 
 
 **`/flat-fee-calculator` CSV won't open cleanly in Excel:**
 Make sure you saved it with the `.csv` extension the skill proposes. If a currency or percentage column looks like plain text instead of a number, re-import it or use your spreadsheet program's "convert text to columns" tool — Filesystem-connector writes are plain text, so number formatting applied in Excel afterward is normal.
-
-**`/research-memo` says it found no relevant sources, or skips a file in the source index:**
-The skill only cites documents it can extract readable text from inside your connected Filesystem folder — it never searches the web or a case-law database to fill the gap. If a source is a scanned image or a binary format the connector can't parse, re-save it as a text-based PDF or a `.md`/`.txt` copy. If the sources are readable but genuinely don't address your question, that's the skill working correctly — attach the documents that do before running it again.

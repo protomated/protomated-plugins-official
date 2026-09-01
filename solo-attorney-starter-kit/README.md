@@ -1,6 +1,6 @@
 # Solo Attorney Claude Starter Kit — Claude Desktop Plugin
 
-A Claude Desktop plugin that turns your local matter files, Gmail, and Google Calendar into a solo attorney operations assistant. Eight pre-built skills: intake summaries, engagement letters, court deadline reasoning, meeting prep briefs, billing narrative drafting, new-matter setup, a flat-fee repricing calculator, and a verified-source legal research memo drafter — from your own files, in under five minutes of setup.
+A Claude Desktop plugin that turns your local matter files, Gmail, and Google Calendar into a solo attorney operations assistant. Seven pre-built skills: intake summaries, engagement letters, court deadline reasoning, meeting prep briefs, billing narrative drafting, new-matter setup, and a flat-fee repricing calculator — from your own files, in under five minutes of setup.
 
 **Distributed by [Protomated](https://protomated.com) as a free download.**
 
@@ -82,17 +82,14 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 > │   ├── intake-summary.md
 > │   ├── tasks.md
 > │   ├── medical/
-> │   ├── correspondence/
-> │   └── research/
-> │       ├── sources/
-> │       └── liability-memo.md
+> │   └── correspondence/
 > ├── Acme-Contract-Dispute/
 > │   ├── intake-summary.md
 > │   ├── tasks.md
 > │   └── pleadings/
 > └── ...
 > ```
-> Run `/new-matter-organizer` to create this structure for a new matter, then `/intake-summary` to populate the anchor file all other skills read from. If you have your own engagement-letter template, save it once as `templates/engagement-letter-template.md` (or `.txt`/`.docx`) and `/engagement-letter` will use it automatically for every matter. `/flat-fee-calculator` saves its CSV models to a top-level `pricing/` folder since a repricing model applies across matters of a given type, not to a single matter. `/research-memo` reads whatever source documents you attach in a matter's `research/sources/` folder (cases, statutes, briefs) and saves the drafted memo alongside it in `research/`.
+> Run `/new-matter-organizer` to create this structure for a new matter, then `/intake-summary` to populate the anchor file all other skills read from. If you have your own engagement-letter template, save it once as `templates/engagement-letter-template.md` (or `.txt`/`.docx`) and `/engagement-letter` will use it automatically for every matter. `/flat-fee-calculator` saves its CSV models to a top-level `pricing/` folder since a repricing model applies across matters of a given type, not to a single matter.
 
 ### Step 4 — Connect Google Calendar
 
@@ -102,7 +99,7 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 
 ### Step 5 — Verify
 
-Open a new Claude Desktop chat. Type `/skills`. You should see all eight skills listed. Run `/intake-summary` on a test matter to verify Filesystem access is working.
+Open a new Claude Desktop chat. Type `/skills`. You should see all seven skills listed. Run `/intake-summary` on a test matter to verify Filesystem access is working.
 
 See [CONNECTORS.md](CONNECTORS.md) for troubleshooting.
 
@@ -201,16 +198,7 @@ Builds a revenue-impact model comparing hourly billing to flat-fee/value pricing
 
 ---
 
-### `/research-memo` — Verified-Source Legal Research Memo Drafter
-
-Drafts a legal research memo citing only the source documents (cases, statutes, briefs, contracts) you've attached to a workspace folder. No open web search, no case-law database, and no citation drawn from general model knowledge — anything your sources don't support is flagged, not filled in. Every citation is anchored to a specific document and page/paragraph, and the memo ends with a mandatory checklist so you can verify each one before relying on it.
-
-**Use when:** You have the cases, statutes, or briefs on hand and want a first-draft memo built strictly from them, with a built-in check against hallucinated citations.
-
-```
-/research-memo "Does the indemnification clause in the Acme MSA cover third-party IP claims?" — ~/Matters/Acme-Contract/sources
-/research-memo "Is the traffic stop supported by reasonable suspicion under these facts?" — ~/Matters/Delgado-Auto-2026/sources
-```
+> Need verified-source legal research memos too? `/research-memo` is now its own standalone plugin — **Research Memo Drafter** — in the same [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official), so it can be installed independently of this kit.
 
 ---
 
@@ -232,7 +220,7 @@ All processing happens inside your Claude Desktop session. See [CONNECTORS.md](C
 
 ## Want a Custom Skill Library Built for Your Practice?
 
-This kit covers eight core workflows. The typical solo practice has 15–20 more: jurisdiction-specific court filings, intake questionnaires tuned to your practice areas, Clio or Filevine integration, and skills built to your exact voice and playbook.
+This kit covers seven core workflows. The typical solo practice has 15–20 more: jurisdiction-specific court filings, intake questionnaires tuned to your practice areas, Clio or Filevine integration, and skills built to your exact voice and playbook.
 
 **Protomated builds custom Claude Desktop skill libraries for solo and small-firm attorneys: $3,000–$6,000 depending on scope.**
 

@@ -24,7 +24,7 @@ You have access to three connectors:
 
 **Run `/intake-summary` first on any new matter** — it creates `intake-summary.md`, the anchor document all other skills read from.
 
-You assist with eight workflows, each accessible via a `/skill`:
+You assist with seven workflows, each accessible via a `/skill`:
 
 | Skill | What it does |
 |---|---|
@@ -35,7 +35,6 @@ You assist with eight workflows, each accessible via a `/skill`:
 | `/billing-narrative` | Drafts a billing-code-appropriate time narrative from your notes or email thread |
 | `/new-matter-organizer` | Creates the standard folder tree and task checklist for a new matter; sorts existing documents by type |
 | `/flat-fee-calculator` | Builds a revenue-impact model comparing hourly billing to flat-fee pricing for AI-accelerated tasks; outputs a CSV |
-| `/research-memo` | Drafts a legal research memo citing only source documents you've attached — no web search, no case-law database, refuses to cite anything not supplied |
 
 ---
 
