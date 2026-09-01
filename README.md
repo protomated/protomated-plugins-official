@@ -4,7 +4,7 @@ Free Claude Cowork plugins for solo and small-firm attorneys, built by Protomate
 
 > **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in 3 minutes. This README is the full reference.
 
-The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Five of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Five further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, **Contract Document Reviewer**, and **Bar-Compliant Marketing Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
+The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Six of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Five further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, **Contract Document Reviewer**, and **Bar-Compliant Marketing Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
 
 Distributed free by [Protomated](https://protomated.com) at [protomated.com/resources](https://protomated.com/resources).
 
@@ -47,6 +47,7 @@ See [`solo-attorney-starter-kit/README.md`](solo-attorney-starter-kit/README.md)
 | `court-deadline-calendar` | `/court-deadline` | Filesystem, Google Calendar |
 | `billing-narrative-drafter` | `/billing-narrative` | Filesystem |
 | `meeting-prep-brief` | `/meeting-prep` | Filesystem, Gmail |
+| `research-memo-drafter` | `/research-memo` | Filesystem |
 | `legal-billing` | `/legal-billing`, `/legal-billing:log-time`, `/legal-billing:invoice-client`, `/legal-billing:trust-entry`, `/legal-billing:billing-review` | Google (via remote MCP) |
 | `demand-letter-drafter` | `/demand-letter` | None (attach a workspace folder) |
 | `estate-planning-document-assembler` | `/estate-documents` | None (attach a workspace folder) |
@@ -75,6 +76,7 @@ engagement-letter-drafter/     same layout: .claude-plugin/plugin.json,
 court-deadline-calendar/       .mcp.json, README.md, skills/<name>/SKILL.md
 billing-narrative-drafter/
 meeting-prep-brief/
+research-memo-drafter/
 
 legal-billing-tracker/         Standalone plugin (name: legal-billing) — billing,
                                 invoicing, and trust accounting via a remote MCP server

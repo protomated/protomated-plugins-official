@@ -19,6 +19,7 @@ const PLUGIN_CONNECTORS = {
   "court-deadline-calendar": ["google-calendar"],
   "billing-narrative-drafter": ["filesystem"],
   "meeting-prep-brief": ["filesystem", "gmail"],
+  "research-memo-drafter": ["filesystem"],
 };
 
 for (const [plugin, connectors] of Object.entries(PLUGIN_CONNECTORS)) {

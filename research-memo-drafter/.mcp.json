@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "type": "http",
+      "url": ""
+    }
+  }
+}
