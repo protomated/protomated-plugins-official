@@ -2,13 +2,6 @@
   "_comment": "Catalog entries not yet built. Move an entry into .claude-plugin/marketplace.json only when its plugin directory exists and validates — every marketplace `source` must point at a directory containing .claude-plugin/plugin.json (invariant I8). Names/descriptions below are the canonical CP-catalog wording.",
   "planned": [
     {
-      "name": "bar-compliant-marketing-reviewer",
-      "displayName": "Bar-Compliant Marketing Reviewer",
-      "source": "./bar-compliant-marketing-reviewer",
-      "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
-      "author": { "name": "Protomated" }
-    },
-    {
       "name": "ai-use-policy-generator",
       "displayName": "AI Use Policy Generator",
       "source": "./ai-use-policy-generator",

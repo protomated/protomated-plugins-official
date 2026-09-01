@@ -4,7 +4,7 @@ Free Claude Cowork plugins for solo and small-firm attorneys, built by Protomate
 
 > **New here?** Start with [QUICKSTART.md](QUICKSTART.md) — install in 3 minutes. This README is the full reference.
 
-The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Five of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Four further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, and **Contract Document Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
+The **Solo Attorney Starter Kit** is the flagship plugin: eight skills that read your local matter files, Gmail, and Google Calendar to organize new matters, surface court deadlines, draft engagement letters, billing narratives, and pre-meeting briefs, reprice flat fees, and draft verified-source legal research memos — in under five minutes of setup. Five of the eight skills are also available as standalone plugins. The **Legal Billing Tracker** is a separate, free replacement for Clio/PracticePanther billing modules. Five further standalone, single-skill plugins — **Demand Letter Drafter**, **Estate Planning Document Assembler**, **Immigration Filing Drafter**, **Contract Document Reviewer**, and **Bar-Compliant Marketing Reviewer** — cover practice-area-specific drafting and review from a workspace folder you attach directly, with no connector setup.
 
 Distributed free by [Protomated](https://protomated.com) at [protomated.com/resources](https://protomated.com/resources).
 
@@ -52,6 +52,7 @@ See [`solo-attorney-starter-kit/README.md`](solo-attorney-starter-kit/README.md)
 | `estate-planning-document-assembler` | `/estate-documents` | None (attach a workspace folder) |
 | `immigration-filing-drafter` | `/immigration-filing` | None (attach a workspace folder) |
 | `contract-document-reviewer` | `/contract-review` | None (attach a workspace folder) |
+| `bar-compliant-marketing-reviewer` | `/marketing-review` | None (attach a workspace folder) |
 
 Plugins that are planned but not yet built are parked in [`docs/planned-plugins.json`](docs/planned-plugins.json) — they are added to `marketplace.json` only once their directory exists.
 
@@ -82,6 +83,7 @@ demand-letter-drafter/               Standalone, connector-free plugins — one 
 estate-planning-document-assembler/  each, reading only a workspace folder you
 immigration-filing-drafter/          explicitly attach: .claude-plugin/plugin.json,
 contract-document-reviewer/          .mcp.json (empty), README.md, skills/<name>/SKILL.md
+bar-compliant-marketing-reviewer/
 
 site/             Next.js landing page (Cloudflare Pages)
   app/api/subscribe/route.ts   Edge route: email capture → Kit API

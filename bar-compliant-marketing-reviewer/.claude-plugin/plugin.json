@@ -1,0 +1,8 @@
+{
+  "name": "bar-compliant-marketing-reviewer",
+  "version": "1.0.0",
+  "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
+  "author": {
+    "name": "Protomated"
+  }
+}

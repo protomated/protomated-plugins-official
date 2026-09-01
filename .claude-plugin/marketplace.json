@@ -104,6 +104,15 @@
       "author": {
         "name": "Protomated"
       }
+    },
+    {
+      "name": "bar-compliant-marketing-reviewer",
+      "displayName": "Bar-Compliant Marketing Reviewer",
+      "source": "./bar-compliant-marketing-reviewer",
+      "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
+      "author": {
+        "name": "Protomated"
+      }
     }
   ]
 }
