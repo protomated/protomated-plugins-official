@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — seven skills), five of those seven skills also as standalone plugins, the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, one more connector-free plugin (Bar-Compliant Marketing Reviewer) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo, and one skill (Research Memo Drafter) that ships **only** as its own standalone plugin, not inside the starter kit at all. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
+A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — seven skills), five of those seven skills also as standalone plugins, the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, three more connector-free plugins (Bar-Compliant Marketing Reviewer, Conflict-of-Interest Checker, Spanish Intake Skill) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo, and one skill (Research Memo Drafter) that ships **only** as its own standalone plugin, not inside the starter kit at all. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
 
 ## Repo layout
 
@@ -36,7 +36,8 @@ contract-document-reviewer/          write-mcp-configs.mjs): these skills read o
                                       no MCP connector or auth step.
 
 bar-compliant-marketing-reviewer/    Same connector-free layout, but built natively here
-                                      from the CP-catalog — no upstream repo to re-sync from.
+conflict-of-interest-checker/        from the CP-catalog — no upstream repo to re-sync from.
+spanish-intake-skill/
 
 site/                            Next.js landing page (Cloudflare Pages)
   app/api/subscribe/route.ts     Edge route: email capture → Kit API
@@ -82,7 +83,7 @@ npm run site:deploy    # build + wrangler pages deploy to Cloudflare Pages
 - Each `skills/<name>/SKILL.md` has frontmatter whose `name` matches its directory and a non-empty `description`, plus the compliance markers (below)
 - Root `package.json` version must match `solo-attorney-starter-kit/.claude-plugin/plugin.json` version (the zip release channel derives its tag/filename from package.json)
 
-**Adding a plugin:** create the top-level dir with the full layout, add its connectors to `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`, then add the marketplace.json entry. If the plugin needs no built-in connector (attach-only workspace access, like the five connector-free plugins), commit a static `.mcp.json` containing `{}` instead — do not add it to `write-mcp-configs.mjs`. Planned-but-unbuilt plugins live in `docs/planned-plugins.json` — never in marketplace.json (that would break I8).
+**Adding a plugin:** create the top-level dir with the full layout, add its connectors to `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`, then add the marketplace.json entry. If the plugin needs no built-in connector (attach-only workspace access, like the seven connector-free plugins), commit a static `.mcp.json` containing `{}` instead — do not add it to `write-mcp-configs.mjs`. Planned-but-unbuilt plugins live in `docs/planned-plugins.json` — never in marketplace.json (that would break I8).
 
 ## Distribution channels
 
@@ -149,6 +150,6 @@ The plugins themselves have no environment variables. The site deploys to Cloudf
 
 ## Notes
 
-- Each plugin's `.mcp.json` declares connector requirements with intentionally blank `url` fields — Gmail, Google Calendar, and Filesystem are built into Claude Desktop and managed by Anthropic. Never hand-edit these files; change `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`. Exception: the five connector-free plugins' `.mcp.json` is a committed static `{}` — they aren't in `write-mcp-configs.mjs` since they declare no connector at all.
+- Each plugin's `.mcp.json` declares connector requirements with intentionally blank `url` fields — Gmail, Google Calendar, and Filesystem are built into Claude Desktop and managed by Anthropic. Never hand-edit these files; change `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`. Exception: the seven connector-free plugins' `.mcp.json` is a committed static `{}` — they aren't in `write-mcp-configs.mjs` since they declare no connector at all.
 - The root `.mcp.json` is a local development MCP config (unrelated to the plugins) and must not contain committed credentials — keep tokens in env vars or gitignore the file.
 - Plugin READMEs and `solo-attorney-starter-kit/CONNECTORS.md` are end-user documentation; they are not internal developer docs.

@@ -1,0 +1,8 @@
+{
+  "name": "spanish-intake-skill",
+  "version": "1.0.0",
+  "description": "Conducts bilingual (English/Spanish) client intake and communication: turns Spanish-language intake notes or a voicemail transcript into a structured English intake summary for the file, and turns an English draft communication into a natural Spanish version — flagging any ambiguous translation for the attorney's confirmation rather than guessing.",
+  "author": {
+    "name": "Protomated"
+  }
+}

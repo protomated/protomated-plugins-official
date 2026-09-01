@@ -122,6 +122,24 @@
       "author": {
         "name": "Protomated"
       }
+    },
+    {
+      "name": "conflict-of-interest-checker",
+      "displayName": "Conflict-of-Interest Checker",
+      "source": "./conflict-of-interest-checker",
+      "description": "Fuzzy-matches new-matter party names against your existing client/matter list — accounting for nicknames, entity-suffix variations, and misspellings — and returns a structured possible-conflict report. Never clears or declines a matter; the attorney makes every conflict determination.",
+      "author": {
+        "name": "Protomated"
+      }
+    },
+    {
+      "name": "spanish-intake-skill",
+      "displayName": "Spanish Intake Skill",
+      "source": "./spanish-intake-skill",
+      "description": "Conducts bilingual (English/Spanish) client intake and communication: turns Spanish-language intake notes or a voicemail transcript into a structured English intake summary for the file, and turns an English draft communication into a natural Spanish version — flagging any ambiguous translation for the attorney's confirmation rather than guessing.",
+      "author": {
+        "name": "Protomated"
+      }
     }
   ]
 }

@@ -16,13 +16,6 @@
       "author": { "name": "Protomated" }
     },
     {
-      "name": "spanish-intake-skill",
-      "displayName": "Spanish Intake Skill",
-      "source": "./spanish-intake-skill",
-      "description": "Conducts a bilingual (English/Spanish) client intake, produces a structured intake summary in English for the attorney's file, and drafts a Spanish-language acknowledgment for the client.",
-      "author": { "name": "Protomated" }
-    },
-    {
       "name": "ai-tool-hygiene-audit",
       "displayName": "AI Tool Hygiene Audit",
       "source": "./ai-tool-hygiene-audit",
