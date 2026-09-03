@@ -1,0 +1,8 @@
+{
+  "name": "flat-fee-calculator",
+  "version": "1.0.0",
+  "description": "Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.",
+  "author": {
+    "name": "Protomated"
+  }
+}

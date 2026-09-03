@@ -1,6 +1,6 @@
 # Solo Attorney Claude Starter Kit — Claude Desktop Plugin
 
-A Claude Desktop plugin that turns your local matter files, Gmail, and Google Calendar into a solo attorney operations assistant. Seven pre-built skills: intake summaries, engagement letters, court deadline reasoning, meeting prep briefs, billing narrative drafting, new-matter setup, and a flat-fee repricing calculator — from your own files, in under five minutes of setup.
+A Claude Desktop plugin that turns your local matter files, Gmail, and Google Calendar into a solo attorney operations assistant. Six pre-built skills: intake summaries, engagement letters, court deadline reasoning, meeting prep briefs, billing narrative drafting, and new-matter setup — from your own files, in under five minutes of setup.
 
 **Distributed by [Protomated](https://protomated.com) as a free download.**
 
@@ -76,8 +76,6 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 > ~/Matters/
 > ├── templates/
 > │   └── engagement-letter-template.md
-> ├── pricing/
-> │   └── standard-nda-review-repricing-model-2026-07-30.csv
 > ├── Smith-John-PI/
 > │   ├── intake-summary.md
 > │   ├── tasks.md
@@ -89,7 +87,7 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 > │   └── pleadings/
 > └── ...
 > ```
-> Run `/new-matter-organizer` to create this structure for a new matter, then `/intake-summary` to populate the anchor file all other skills read from. If you have your own engagement-letter template, save it once as `templates/engagement-letter-template.md` (or `.txt`/`.docx`) and `/engagement-letter` will use it automatically for every matter. `/flat-fee-calculator` saves its CSV models to a top-level `pricing/` folder since a repricing model applies across matters of a given type, not to a single matter.
+> Run `/new-matter-organizer` to create this structure for a new matter, then `/intake-summary` to populate the anchor file all other skills read from. If you have your own engagement-letter template, save it once as `templates/engagement-letter-template.md` (or `.txt`/`.docx`) and `/engagement-letter` will use it automatically for every matter.
 
 ### Step 4 — Connect Google Calendar
 
@@ -99,7 +97,7 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 
 ### Step 5 — Verify
 
-Open a new Claude Desktop chat. Type `/skills`. You should see all seven skills listed. Run `/intake-summary` on a test matter to verify Filesystem access is working.
+Open a new Claude Desktop chat. Type `/skills`. You should see all six skills listed. Run `/intake-summary` on a test matter to verify Filesystem access is working.
 
 See [CONNECTORS.md](CONNECTORS.md) for troubleshooting.
 
@@ -185,16 +183,7 @@ Creates the standard folder tree for a new matter (based on practice area), popu
 
 ---
 
-### `/flat-fee-calculator` — AI-Adjusted Flat-Fee Repricing Calculator
-
-Builds a revenue-impact model comparing hourly billing to flat-fee/value pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before and after using AI (including this kit's own skills), and matter volume, then outputs a CSV you can open in Excel or Sheets with several flat-fee price points that preserve margin. A pricing/business model — not legal advice.
-
-**Use when:** You suspect hourly billing is handing AI-driven time savings back to clients as an unrequested discount, and want the numbers before deciding whether to reprice.
-
-```
-/flat-fee-calculator "standard NDA review"
-/flat-fee-calculator "uncontested divorce document package"
-```
+> Need the AI-adjusted flat-fee repricing calculator too? `/flat-fee-calculator` is now its own standalone plugin — **Flat-Fee Repricing Calculator** — in the same [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official), so it can be installed independently of this kit.
 
 ---
 
@@ -220,7 +209,7 @@ All processing happens inside your Claude Desktop session. See [CONNECTORS.md](C
 
 ## Want a Custom Skill Library Built for Your Practice?
 
-This kit covers seven core workflows. The typical solo practice has 15–20 more: jurisdiction-specific court filings, intake questionnaires tuned to your practice areas, Clio or Filevine integration, and skills built to your exact voice and playbook.
+This kit covers six core workflows. The typical solo practice has 15–20 more: jurisdiction-specific court filings, intake questionnaires tuned to your practice areas, Clio or Filevine integration, and skills built to your exact voice and playbook.
 
 **Protomated builds custom Claude Desktop skill libraries for solo and small-firm attorneys: $3,000–$6,000 depending on scope.**
 

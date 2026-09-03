@@ -4,25 +4,24 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this repo is
 
-A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — seven skills), five of those seven skills also as standalone plugins, the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, three more connector-free plugins (Bar-Compliant Marketing Reviewer, Conflict-of-Interest Checker, Spanish Intake Skill) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo, and one skill (Research Memo Drafter) that ships **only** as its own standalone plugin, not inside the starter kit at all. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
+A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claude-for-legal`. It ships one flagship bundle (the Solo Attorney Starter Kit — six skills, per the original CP1 spec: none of the six are also standalone plugins — the Starter Kit's own release is their release), the Legal Billing Tracker (a separate product with its own remote MCP server), four further standalone, single-skill, connector-free plugins (Demand Letter Drafter, Estate Planning Document Assembler, Immigration Filing Drafter, Contract Document Reviewer) that each mirror their own upstream product repo, three more connector-free plugins (Bar-Compliant Marketing Reviewer, Conflict-of-Interest Checker, Spanish Intake Skill) built natively in this repo from the CP-catalog (`docs/planned-plugins.json`) rather than mirroring an external upstream repo, and two skills (Flat-Fee Repricing Calculator, Research Memo Drafter) that ship **only** as their own standalone plugin, not inside the starter kit at all — neither is a CP1 component skill. There is no runtime code for the drafting skills, no bundled MCP server, and no backend beyond the Legal Billing Tracker's own hosted service. The product is mostly content: markdown skill files, JSON manifests, and a Next.js landing page.
 
 ## Repo layout
 
 ```
 .claude-plugin/marketplace.json  Marketplace manifest — every installable plugin, in curated order
 
-solo-attorney-starter-kit/       Flagship bundle (all seven bundled skills; also packaged into the release .zip)
+solo-attorney-starter-kit/       Flagship bundle (all six bundled skills; also packaged into the release .zip)
   .claude-plugin/plugin.json     Identity manifest (kebab-case name, semver version)
   .mcp.json                      Declares gmail + google-calendar + filesystem connectors
   prompts/system-prompt.md       Master system prompt — ethical guardrails live here
-  skills/*/SKILL.md              One directory per skill; YAML frontmatter + markdown body
+  skills/*/SKILL.md              One directory per skill; YAML frontmatter + markdown body.
+                                  None of these six skills also ship as a standalone plugin.
 
-new-matter-organizer/            Standalone plugins — one skill each, same layout:
-engagement-letter-drafter/       .claude-plugin/plugin.json, .mcp.json, README.md,
-court-deadline-calendar/         skills/<skill-name>/SKILL.md
-billing-narrative-drafter/
-meeting-prep-brief/
-research-memo-drafter/
+flat-fee-calculator/             Standalone plugins — one skill each, same layout:
+research-memo-drafter/           .claude-plugin/plugin.json, .mcp.json, README.md,
+                                  skills/<skill-name>/SKILL.md. Neither is a CP1
+                                  component skill, so neither lives in the Starter Kit.
 
 legal-billing-tracker/           Standalone plugin (plugin.json name: legal-billing) — a
                                   separate product, not split from the starter kit. Uses a
@@ -120,13 +119,13 @@ argument-hint: "[hint shown in Claude Desktop]"
 
 The body instructs Claude what tools to call (via the built-in Gmail, Google Calendar, and Filesystem connectors), what output format to produce, and what confirmation to request before any state-changing action.
 
-The starter kit's seven skills are `intake-summary`, `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`, and `flat-fee-calculator`. Five of these (`new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, `meeting-prep`) also ship as standalone plugins; `intake-summary` and `flat-fee-calculator` currently ship only inside the bundle. `research-memo` is **not** part of the starter kit at all — it ships only as its own standalone plugin, `research-memo-drafter`. **`/new-matter-organizer` must run first on any new matter** — it sets up the folder structure that `/intake-summary` then populates with `intake-summary.md`, the anchor file all other skills read. Standalone plugin directory names differ from their skill names (e.g. `engagement-letter-drafter/skills/engagement-letter/`).
+The starter kit's six skills are `intake-summary`, `new-matter-organizer`, `court-deadline`, `engagement-letter`, `billing-narrative`, and `meeting-prep` — these are CP1's five component skills (PTPAC-6 CP5, PTPAC-20 CP8, PTPAC-19 CP13, PTPAC-5 CP16, PTPAC-4 CP12) plus `intake-summary`, which is part of CP5's spec ("Engagement Letter & Intake Summary Drafter") but is built here as its own separate skill rather than merged into `/engagement-letter`. **None of these six ship as a separate standalone plugin** — the Starter Kit's own release is the only release for each of them; do not re-split one back out into `./<skill-name>-drafter/` without confirming against CP1's component list first. **`/new-matter-organizer` must run first on any new matter** — it sets up the folder structure that `/intake-summary` then populates with `intake-summary.md`, the anchor file all other skills read.
 
-The starter kit's `skills/` are the canonical copies; the standalone plugins carry verbatim copies. When editing a SKILL.md, update it in **both** the starter kit and its standalone plugin.
+`flat-fee-calculator` (CP14) and `research-memo` (CP9) are **not** CP1 component skills — each ships only as its own standalone plugin (`flat-fee-calculator/`, `research-memo-drafter/`), never inside the starter kit bundle. If a CP1 component's SKILL.md needs an edit, only the starter kit's copy exists — there is no standalone counterpart to also update.
 
 `legal-billing-tracker/` is not split from the starter kit — it mirrors `protomated/claude-legal-billing-and-time-tracker`'s `cowork-plugin/` directory. When that upstream repo changes, re-sync this copy manually; there is no shared generator between the two repos.
 
-`demand-letter-drafter/`, `estate-planning-document-assembler/`, `immigration-filing-drafter/`, and `contract-document-reviewer/` are each single-skill products in their own right, mirroring `protomated/claude-demand-letter-drafter`, `protomated/claude-estate-planning-document-assembler`, `protomated/claude-immigration-filing-drafter`, and `protomated/claude-contract-document-reviewer` respectively (that last one ships as a GitHub Release zip rather than tracking `main`). Each upstream repo's own `plugin/` (or packaged) directory is the source of truth for its `skills/<name>/SKILL.md` — re-sync manually when the upstream repo changes. Their upstream compliance headers use skill-specific wording (e.g. "ASSISTED CONTRACT REVIEW", "ASSISTED IMMIGRATION FILING DRAFT") without the `AI-` prefix this marketplace requires — when re-syncing, rewrite the header line back to literally contain `AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED` (extra qualifying words may follow) so the compliance-marker check keeps passing. Each also ships its own `LICENSE`, `manifest.json`, `prompts/system-prompt.md`, `CONNECTORS.md`, and marketing-oriented `README.md` upstream — trim these to just `.claude-plugin/plugin.json`, `.mcp.json`, `skills/`, and a README matching this marketplace's short standalone-plugin template (see e.g. `new-matter-organizer/README.md`) when importing.
+`demand-letter-drafter/`, `estate-planning-document-assembler/`, `immigration-filing-drafter/`, and `contract-document-reviewer/` are each single-skill products in their own right, mirroring `protomated/claude-demand-letter-drafter`, `protomated/claude-estate-planning-document-assembler`, `protomated/claude-immigration-filing-drafter`, and `protomated/claude-contract-document-reviewer` respectively (that last one ships as a GitHub Release zip rather than tracking `main`). Each upstream repo's own `plugin/` (or packaged) directory is the source of truth for its `skills/<name>/SKILL.md` — re-sync manually when the upstream repo changes. Their upstream compliance headers use skill-specific wording (e.g. "ASSISTED CONTRACT REVIEW", "ASSISTED IMMIGRATION FILING DRAFT") without the `AI-` prefix this marketplace requires — when re-syncing, rewrite the header line back to literally contain `AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED` (extra qualifying words may follow) so the compliance-marker check keeps passing. Each also ships its own `LICENSE`, `manifest.json`, `prompts/system-prompt.md`, `CONNECTORS.md`, and marketing-oriented `README.md` upstream — trim these to just `.claude-plugin/plugin.json`, `.mcp.json`, `skills/`, and a README matching this marketplace's short standalone-plugin template (see e.g. `flat-fee-calculator/README.md`) when importing.
 
 ## Compliance constraints — non-negotiable
 

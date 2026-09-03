@@ -1,8 +1,0 @@
-{
-  "name": "billing-narrative-drafter",
-  "version": "1.1.0",
-  "description": "Draft a billing-code-appropriate time narrative and suggest a time increment from your rough notes, an email thread, or a description of work performed. Attorney confirms accuracy and time before billing. Paste into Clio, MyCase, PracticePanther, or any billing system. Use after completing any billable task when writing the time entry is slowing you down.",
-  "author": {
-    "name": "Protomated"
-  }
-}

@@ -47,6 +47,3 @@ Go to Settings → Connectors and click Connect on Google Calendar. Sign in with
 
 **`/engagement-letter` isn't using my own template:**
 Confirm your template's filename contains a word like "engagement," "retainer," or "fee agreement," and that it's saved either directly in the matter folder or inside a `templates/` folder at the top of your connected Filesystem folder (e.g. `~/Matters/templates/`). If it's a `.docx`/`.doc` file and the skill says it can't extract readable text, save a `.md` or `.txt` copy instead — Filesystem connectors read text-based files more reliably than binary formats.
-
-**`/flat-fee-calculator` CSV won't open cleanly in Excel:**
-Make sure you saved it with the `.csv` extension the skill proposes. If a currency or percentage column looks like plain text instead of a number, re-import it or use your spreadsheet program's "convert text to columns" tool — Filesystem-connector writes are plain text, so number formatting applied in Excel afterward is normal.

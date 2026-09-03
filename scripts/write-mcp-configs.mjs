@@ -14,11 +14,7 @@ const CONNECTOR = { type: "http", url: "" };
 
 const PLUGIN_CONNECTORS = {
   "solo-attorney-starter-kit": ["gmail", "google-calendar", "filesystem"],
-  "new-matter-organizer": ["filesystem"],
-  "engagement-letter-drafter": ["filesystem", "gmail"],
-  "court-deadline-calendar": ["google-calendar"],
-  "billing-narrative-drafter": ["filesystem"],
-  "meeting-prep-brief": ["filesystem", "gmail"],
+  "flat-fee-calculator": ["filesystem"],
   "research-memo-drafter": ["filesystem"],
 };
 

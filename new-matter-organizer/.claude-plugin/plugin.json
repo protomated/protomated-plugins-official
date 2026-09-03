@@ -1,8 +1,0 @@
-{
-  "name": "new-matter-organizer",
-  "version": "1.1.0",
-  "description": "Set up a new matter folder with the standard directory structure for the practice area, a starter task checklist, and file any existing documents by type. Run when opening a new client file. Works entirely inside your attached workspace folder. No files are written without attorney confirmation.",
-  "author": {
-    "name": "Protomated"
-  }
-}
