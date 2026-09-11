@@ -2,7 +2,7 @@
 
 Standalone plugin with one skill: `/research-memo`. Drafts a legal research memo that cites only the source documents (cases, statutes, briefs, contracts) you've attached to a workspace folder — no open web search, no case-law database, no citation from general training knowledge. Every citation is anchored to a specific source file and page/paragraph; anything the sources don't support is flagged, never filled in.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want all eight attorney skills in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want the full attorney skill set in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
 ## Connectors
 
