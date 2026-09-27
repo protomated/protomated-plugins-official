@@ -62,7 +62,7 @@ export default function Page() {
             (or the Claude API under a signed DPA). Do not use a consumer Claude
             plan (Claude Pro) with client-privileged content &mdash; doing so
             risks waiving attorney-client privilege. See{" "}
-            <em>Heppner v. Doe</em> (S.D.N.Y. Feb. 2026) and your state
+            <em>United States v. Heppner</em> (S.D.N.Y. Feb. 2026) and your state
             bar&rsquo;s AI ethics guidance.
           </p>
           <p className="mb-2.5 font-sans text-sm leading-[1.7] text-muted-foreground">

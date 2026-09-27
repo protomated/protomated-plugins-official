@@ -2,7 +2,9 @@
   "mcpServers": {
     "filesystem": {
       "type": "http",
-      "url": ""
+      "url": "",
+      "title": "Filesystem",
+      "description": "Built into Claude Desktop, managed by Anthropic. Connect via Settings → Connectors — no URL to configure here."
     }
   }
 }

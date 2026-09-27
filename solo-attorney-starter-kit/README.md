@@ -20,7 +20,7 @@ You must be on one of the following before using this plugin with real client ma
 - **Claude Team or Enterprise**
 - **Claude API** (with a signed DPA from Anthropic)
 
-Using a consumer plan with client-privileged content risks waiving attorney-client privilege and may violate your ethical obligations to your clients. See *Heppner v. Doe* (S.D.N.Y. Feb. 2026) and your state bar's AI ethics guidance before proceeding.
+Using a consumer plan with client-privileged content risks waiving attorney-client privilege and may violate your ethical obligations to your clients. See *United States v. Heppner* (S.D.N.Y. Feb. 2026) and your state bar's AI ethics guidance before proceeding.
 
 > **If you're not sure which plan you're on:** Open Claude Desktop → Help → About. If it says "Claude Pro," you are on a consumer plan. Upgrade to Claude for Work or obtain API access before connecting client email or matter files.
 
@@ -204,6 +204,18 @@ Your Calendar (Google Calendar) ──┘
 ```
 
 All processing happens inside your Claude Desktop session. See [CONNECTORS.md](CONNECTORS.md) for data handling details.
+
+---
+
+## Optional Connectors
+
+Not every skill needs all three connectors, and none of them are hard-required to get value from this kit:
+
+- **Filesystem** is the one most skills lean on, but even here `/intake-summary` and `/billing-narrative` work entirely from notes you paste in — no connected folder needed. Skills that write to the matter folder (`/new-matter-organizer`, `/engagement-letter`) will simply ask you to paste text or confirm a save location if it isn't connected.
+- **Gmail** is used only as *supplementary* context — `/meeting-prep` checks recent email for developments, and `/engagement-letter` checks for agreed fee terms. Both skills work fully without it; they just skip the email-context step.
+- **Google Calendar** is used only by `/court-deadline`'s final step. The deadline computation and its full reasoning happen with or without this connector — Calendar is only needed if you want the confirmed date turned into a calendar event automatically.
+
+Connect only what you plan to use. Skills degrade gracefully and will tell you what they couldn't check.
 
 ---
 

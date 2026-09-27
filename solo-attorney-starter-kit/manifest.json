@@ -12,14 +12,5 @@
     "type": "git",
     "url": "https://github.com/protomated/claude-solo-attorney-starter-kit"
   },
-  "license": "MIT",
-  "server": {
-    "type": "node",
-    "entry_point": "server/index.js",
-    "mcp_config": {
-      "command": "node",
-      "args": ["${__dirname}/server/index.js"],
-      "env": {}
-    }
-  }
+  "license": "Apache-2.0"
 }
