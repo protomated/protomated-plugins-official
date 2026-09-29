@@ -2,6 +2,9 @@
 name: meeting-prep
 description: Generate a one-page pre-meeting brief from local matter files. Use before a client meeting, deposition, mediation session, settlement conference, or court appearance — when you need a fast, structured summary of where the matter stands and what you need to accomplish.
 argument-hint: "[matter folder path or describe the meeting]"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: procedural
 ---
 
 # /meeting-prep — Meeting Prep Brief Generator

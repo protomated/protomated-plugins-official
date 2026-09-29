@@ -2,6 +2,9 @@
 name: engagement-letter
 description: Draft a retainer and engagement letter for a new client from intake data, using the firm's own saved template when one is available. Covers scope of representation, fee structure, client obligations, and required ethical disclosures. Use when a new client is ready to retain the firm.
 argument-hint: "[matter folder path or client name]"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: procedural
 ---
 
 # /engagement-letter — Engagement Letter Drafter

@@ -2,6 +2,9 @@
 name: intake-summary
 description: Convert raw client intake notes or form data into a structured case brief. Identifies parties, facts, claims, deadlines, and next steps. Use after an initial client consultation — when you have raw notes and need a clean, organized matter summary before opening the file.
 argument-hint: "[matter folder path, or paste intake notes directly]"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: procedural
 ---
 
 # /intake-summary — Intake Summary Processor

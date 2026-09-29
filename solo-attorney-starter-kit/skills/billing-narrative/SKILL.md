@@ -2,6 +2,9 @@
 name: billing-narrative
 description: Draft a billing-code-appropriate time narrative and suggest a time increment from your rough notes, an email thread, or a description of work performed. Attorney confirms accuracy and time before billing. Paste into Clio, MyCase, PracticePanther, or any billing system. Use after completing any billable task when writing the time entry is slowing you down.
 argument-hint: "[paste rough notes, forward email thread, or describe the work — e.g., 'reviewed deposition transcript, drafted summary memo, 2 hrs approx']"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: procedural
 ---
 
 # /billing-narrative — Billing Narrative & Time-Entry Drafting Skill

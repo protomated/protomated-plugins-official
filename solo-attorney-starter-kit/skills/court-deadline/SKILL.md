@@ -2,6 +2,9 @@
 name: court-deadline
 description: Compute a court or filing deadline from a trigger date and the rule the attorney provides. Shows step-by-step reasoning. Drafts a Google Calendar event for confirmation. Does NOT maintain a jurisdiction-specific rule database — the attorney supplies the rule every time. Use for response deadlines, appeal windows, statute-of-limitations calculations, and other one-off or complex date logic.
 argument-hint: "[trigger date and the rule, e.g. '21 days after service excluding weekends and federal holidays']"
+last_verified: 2026-09-29
+freshness_window: 6 months
+freshness_category: regulatory
 ---
 
 # /court-deadline — Court Deadline Reasoning & Calendar Drafting Skill

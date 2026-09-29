@@ -2,6 +2,9 @@
 name: new-matter-organizer
 description: Set up a new matter folder with the standard directory structure for the practice area, a starter task checklist, and file any existing documents by type. Run when opening a new client file. Works entirely inside your attached workspace folder. No files are written without attorney confirmation.
 argument-hint: "[matter name and practice area, e.g. 'Smith-PI personal injury']"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: procedural
 ---
 
 # /new-matter-organizer — New-Matter Setup & Document Organizer Skill
