@@ -27,7 +27,6 @@ const CONNECTOR_INFO = {
 };
 
 const PLUGIN_CONNECTORS = {
-  "solo-attorney-starter-kit": ["gmail", "google-calendar", "filesystem"],
   "flat-fee-calculator": ["filesystem"],
   "research-memo-drafter": ["filesystem"],
 };

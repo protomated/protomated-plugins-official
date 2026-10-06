@@ -213,4 +213,4 @@ Sources used:
 
 ---
 
-— Prepared with Protomated Solo Attorney Claude Starter Kit (Claude Desktop) | Attorney review required before use | Not legal advice
+— Prepared with Protomated Solo Attorney Claude Starter Kit | Attorney review required before use | Not legal advice

@@ -4,6 +4,8 @@ A Claude Desktop plugin that turns your local matter files, Gmail, and Google Ca
 
 **Distributed by [Protomated](https://protomated.com) as a free download.**
 
+**Works with:** Claude Desktop and ChatGPT Desktop. On ChatGPT, Gmail/Calendar/Filesystem connectors aren't available — paste your notes and files directly into the chat instead; every skill falls back to this cleanly (see Optional Connectors below).
+
 ---
 
 ## ⚠️ Required: Read This Before You Install
@@ -56,16 +58,16 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 
 1. Download `solo-attorney-starter-kit.zip` from the [Releases page](https://github.com/protomated/claude-solo-attorney-starter-kit/releases).
 2. Double-click the `.zip` file, or drag it into Claude Desktop's **Extensions** panel.
-3. Claude Desktop will install the plugin and prompt you to connect the required services.
+3. Claude Desktop will install the plugin.
 
-### Step 2 — Connect Gmail
+### Step 2 — (Optional) Connect Gmail
 
 1. Go to **Claude Desktop → Settings → Connectors**.
 2. Find **Gmail** and click **Connect**.
 3. Sign in with the Google account that holds your client correspondence.
 4. Grant the requested permissions. Anthropic manages the OAuth credentials — your Google password is never shared with Protomated.
 
-### Step 3 — Connect Filesystem (your matters folder)
+### Step 3 — (Optional) Connect Filesystem (your matters folder)
 
 1. In **Settings → Connectors**, find **Filesystem** and click **Connect**.
 2. Select the folder on your computer where your matter files live. Example: `~/Matters` or `~/Documents/Cases`.
@@ -89,7 +91,7 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 > ```
 > Run `/new-matter-organizer` to create this structure for a new matter, then `/intake-summary` to populate the anchor file all other skills read from. If you have your own engagement-letter template, save it once as `templates/engagement-letter-template.md` (or `.txt`/`.docx`) and `/engagement-letter` will use it automatically for every matter.
 
-### Step 4 — Connect Google Calendar
+### Step 4 — (Optional) Connect Google Calendar
 
 1. In **Settings → Connectors**, find **Google Calendar** and click **Connect**.
 2. Sign in with the same Google account you use for scheduling.
@@ -97,9 +99,13 @@ The plugin is instructed to request your explicit in-conversation confirmation b
 
 ### Step 5 — Verify
 
-Open a new Claude Desktop chat. Type `/skills`. You should see all six skills listed. Run `/intake-summary` on a test matter to verify Filesystem access is working.
+Open a new Claude Desktop chat. Type `/skills`. You should see all six skills listed. Run `/intake-summary` on a test matter — paste notes directly if you skipped Filesystem.
 
 See [CONNECTORS.md](CONNECTORS.md) for troubleshooting.
+
+### Using this in ChatGPT Desktop
+
+This kit also works in ChatGPT Desktop. Install the plugin the same way (Settings → Apps & Connectors → Plugins → Upload plugin archive), then paste notes or attach files directly to the conversation instead of connecting Gmail, Filesystem, or Calendar — none of those exist as connectors on ChatGPT. Every skill in this kit already falls back to this mode cleanly; see Optional Connectors below for exactly what each skill needs and what it skips without a connector.
 
 ---
 
@@ -215,7 +221,7 @@ Not every skill needs all three connectors, and none of them are hard-required t
 - **Gmail** is used only as *supplementary* context — `/meeting-prep` checks recent email for developments, and `/engagement-letter` checks for agreed fee terms. Both skills work fully without it; they just skip the email-context step.
 - **Google Calendar** is used only by `/court-deadline`'s final step. The deadline computation and its full reasoning happen with or without this connector — Calendar is only needed if you want the confirmed date turned into a calendar event automatically.
 
-Connect only what you plan to use. Skills degrade gracefully and will tell you what they couldn't check.
+Connect only what you plan to use. Skills degrade gracefully and will tell you what they couldn't check — this is also exactly how the kit behaves in ChatGPT Desktop, which has no equivalent to any of these three connectors at all.
 
 ---
 

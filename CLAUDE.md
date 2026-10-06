@@ -13,7 +13,11 @@ A **Claude plugin marketplace** for solo attorneys, modeled on `anthropics/claud
 
 solo-attorney-starter-kit/       Flagship bundle (all six bundled skills; also packaged into the release .zip)
   .claude-plugin/plugin.json     Identity manifest (kebab-case name, semver version)
-  .mcp.json                      Declares gmail + google-calendar + filesystem connectors
+  (no .mcp.json)                 Removed — Gmail/Calendar/Filesystem are optional on Claude
+                                  (Settings → Connectors) and don't exist on ChatGPT Desktop at
+                                  all; every skill already degrades to paste/attach without them,
+                                  and ChatGPT's plugin importer rejects any zip containing a
+                                  .mcp.json. See the "Notes" section below.
   prompts/system-prompt.md       Master system prompt — ethical guardrails live here
   skills/*/SKILL.md              One directory per skill; YAML frontmatter + markdown body.
                                   None of these six skills also ship as a standalone plugin.
@@ -151,5 +155,6 @@ The plugins themselves have no environment variables. The site deploys to Cloudf
 ## Notes
 
 - Each plugin's `.mcp.json` declares connector requirements with intentionally blank `url` fields — Gmail, Google Calendar, and Filesystem are built into Claude Desktop and managed by Anthropic; each connector entry also carries a `title`/`description` so the blank `url` reads as intentional. Never hand-edit these files; change `scripts/write-mcp-configs.mjs` and run `npm run mcp:write`. Exception: the seven connector-free plugins have no `.mcp.json` at all — they aren't in `write-mcp-configs.mjs` since they declare no connector, and an absent file is clearer than a committed empty `{}`.
+- `solo-attorney-starter-kit` also has no `.mcp.json`, same reasoning but a different trigger: ChatGPT Desktop's plugin importer rejects any zip containing a `.mcp.json` at all, blank URLs included, and every skill in the kit already falls back cleanly to paste/attach without Gmail/Calendar/Filesystem (confirmed by testing on both platforms). Don't re-add it to `write-mcp-configs.mjs` without re-checking that ChatGPT behavior first.
 - The root `.mcp.json` is a local development MCP config (unrelated to the plugins) and must not contain committed credentials — keep tokens in env vars or gitignore the file.
 - Plugin READMEs and `solo-attorney-starter-kit/CONNECTORS.md` are end-user documentation; they are not internal developer docs.

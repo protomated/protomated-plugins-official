@@ -47,3 +47,7 @@ Go to Settings → Connectors and click Connect on Google Calendar. Sign in with
 
 **`/engagement-letter` isn't using my own template:**
 Confirm your template's filename contains a word like "engagement," "retainer," or "fee agreement," and that it's saved either directly in the matter folder or inside a `templates/` folder at the top of your connected Filesystem folder (e.g. `~/Matters/templates/`). If it's a `.docx`/`.doc` file and the skill says it can't extract readable text, save a `.md` or `.txt` copy instead — Filesystem connectors read text-based files more reliably than binary formats.
+
+## Using this in ChatGPT Desktop
+
+This kit also works in ChatGPT Desktop. None of these three connectors exist there — paste notes and emails directly into the chat, and attach files (like your own engagement-letter template) to the conversation instead of connecting Filesystem. `/court-deadline` will still compute and show its full reasoning; you just won't get an automatic calendar event at the end.
