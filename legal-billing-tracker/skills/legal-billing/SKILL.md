@@ -11,6 +11,11 @@ description: >-
   "withdraw from trust", "rate my matters", "year-end summary".
   Do NOT use for general legal advice, case strategy, or anything outside
   billing and time tracking.
+last_verified: 2026-09-29
+freshness_window: 6 months
+freshness_category: regulatory
+verified_against:
+  - https://www.americanbar.org/groups/professional_responsibility/publications/model_rules_of_professional_conduct/rule_1_15_safekeeping_property/
 ---
 
 # Legal Billing and Time Tracker

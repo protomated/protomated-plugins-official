@@ -10,14 +10,15 @@ This plugin connects to the **Legal Billing MCP server** hosted by Protomated. T
 
 **Authentication:** On first use, call `connect_google`. The tool returns a sign-in URL. The attorney clicks it, authorizes read/write access to their spreadsheet, and is done. Tokens are stored server-side per session.
 
-**Data:** The server only accesses the spreadsheet URL the attorney provides via `set_spreadsheet_url`. No other data is stored or accessed.
+**Data:** The server only accesses the spreadsheet the attorney connects — either created in their own Drive via `create_billing_sheet` or provided via `set_spreadsheet_url`. No other data is stored or accessed.
 
 ## Tools provided
 
 | Tool | Description |
 |---|---|
 | `connect_google` | Initiate Google OAuth and return the sign-in URL |
-| `set_spreadsheet_url` | Save the attorney's Google Sheet URL |
+| `create_billing_sheet` | Create the attorney's billing sheet from the template in their own Drive |
+| `set_spreadsheet_url` | Save the attorney's existing Google Sheet URL |
 | `disconnect_google` | Revoke Google OAuth and clear the saved spreadsheet reference |
 | `delete_account` | Permanently delete the attorney's account record from Protomated's database |
 | `log_time` | Append a time entry to the Time Tracker tab |

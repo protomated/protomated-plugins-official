@@ -21,7 +21,7 @@ Part of the [Protomated plugin marketplace](https://github.com/protomated/protom
 ## Setup (one time, ~1 minute)
 
 **Step 1 — Install this plugin**
-In Claude Cowork: open the sidebar → Plugins → Add → upload `legal-billing.plugin`.
+In Claude Cowork: open the sidebar → Plugins → Add → upload `legal-billing.zip`.
 
 **Step 2 — Connect on first use**
 Start a conversation and say anything like *"Log 1.5 hours for John Smith at $300"*. Claude will ask you to connect your Google account, then offer to create your billing sheet automatically from the template — no manual copying needed. (Already have a sheet from an earlier setup? Just paste its URL instead.) Takes about 30 seconds. You'll never need to do it again.
