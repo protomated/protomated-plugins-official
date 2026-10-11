@@ -2,6 +2,9 @@
 name: flat-fee-calculator
 description: Build a revenue-impact model comparing hourly billing to flat-fee/value pricing for AI-accelerated tasks. Takes current hourly rate, typical task time before/after using AI tools (including this kit's own skills), and matter volume; outputs a CSV model that opens in Excel/Sheets plus candidate flat-fee price points that preserve margin. Use when deciding whether AI-driven efficiency gains should become a pricing change instead of an unrequested client discount.
 argument-hint: "[task or matter type to model, e.g. 'uncontested divorce document package']"
+last_verified: 2026-09-29
+freshness_window: 12 months
+freshness_category: stable
 ---
 
 # /flat-fee-calculator — AI-Adjusted Flat-Fee Repricing Calculator
@@ -157,4 +160,4 @@ Save as CSV? [Confirm to save — proposed path: pricing/[task-type]-repricing-m
 
 ---
 
-— Prepared with Protomated Solo Attorney Claude Starter Kit (Claude Desktop) | Attorney review required before use | Not legal advice
+— Prepared with Protomated Flat-Fee Repricing Calculator | Attorney review required before use | Not legal advice
