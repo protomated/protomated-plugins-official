@@ -16,6 +16,8 @@ Hourly billing structurally punishes AI-driven efficiency gains: if a task that 
 
 **This skill reads files only unless the attorney confirms a save. It does not change any billing system, rate, or client agreement.**
 
+**Scope boundary:** use only the Filesystem connector, and only if it's already connected — nothing else. Do not call another plugin's tools (e.g. Legal Billing Tracker's time-entry lookup) even if they appear available in this account. If the attorney wants billing-history cross-referencing, they'll invoke that skill separately; this skill works from Filesystem (if connected) and the numbers the attorney provides, full stop.
+
 ## Invocation
 
 ```
@@ -38,7 +40,7 @@ Ask the attorney for, or infer from the argument:
 4. **Typical time after using AI tools** (hours) — including this kit's own skills where relevant (e.g., `/intake-summary`, `/billing-narrative`, `/engagement-letter` cutting drafting time).
 5. **Matter volume** — how many of this task/matter type per month or year. Ask which period and keep the model consistent with it.
 
-**Optional — grounding the estimate in real data:** if a matter folder or workspace is attached, use the Filesystem connector to search for saved `billing-narrative` output or time entries mentioning the task type keyword, to sanity-check the attorney's before/after estimates. This is a cross-check, not a replacement — always ask the attorney to confirm or adjust the final numbers before modeling. If nothing is found, proceed directly with the attorney's estimates.
+**Optional — grounding the estimate in real data:** if a matter folder or workspace is attached via the Filesystem connector (and only Filesystem — no other plugin's tools), search that folder for saved `billing-narrative` output or time-entry files mentioning the task type keyword, to sanity-check the attorney's before/after estimates. This is a cross-check, not a replacement — always ask the attorney to confirm or adjust the final numbers before modeling. If nothing is found or Filesystem isn't connected, proceed directly with the attorney's estimates.
 
 If any of the five inputs is missing, ask for it directly. Do not assume or invent a rate, time, or volume.
 
