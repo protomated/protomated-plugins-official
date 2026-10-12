@@ -6,7 +6,9 @@ Part of the [Protomated plugin marketplace](https://github.com/protomated/protom
 
 ## Connectors
 
-None. This plugin works entirely from numbers you type in — no MCP connector or authorization step is required. Paste or re-type the output CSV wherever you want to keep it.
+None required. This plugin works entirely from numbers you type in — no MCP connector or authorization step is required. Paste or re-type the output CSV wherever you want to keep it.
+
+**Claude Desktop only — optional:** if you've connected Claude's built-in Filesystem connector (Settings → Connectors → Filesystem, independent of this plugin), the skill detects it automatically and offers to save the CSV straight to your chosen folder instead of pasting it. Nothing to install for this plugin specifically — just Claude's own connector, if you already use it. Not available on ChatGPT Desktop, which has no filesystem connector equivalent.
 
 ## Compliance
 
