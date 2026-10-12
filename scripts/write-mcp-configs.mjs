@@ -27,7 +27,6 @@ const CONNECTOR_INFO = {
 };
 
 const PLUGIN_CONNECTORS = {
-  "flat-fee-calculator": ["filesystem"],
   "research-memo-drafter": ["filesystem"],
 };
 

@@ -6,9 +6,7 @@ Part of the [Protomated plugin marketplace](https://github.com/protomated/protom
 
 ## Connectors
 
-| Connector | Used for |
-|---|---|
-| Filesystem | Optionally cross-checks time estimates against saved billing-narrative output; saves the CSV model only with your explicit confirmation |
+None. This plugin works entirely from numbers you type in — no MCP connector or authorization step is required. Paste or re-type the output CSV wherever you want to keep it.
 
 ## Compliance
 
