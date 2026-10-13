@@ -1,8 +1,22 @@
 {
   "name": "conflict-of-interest-checker",
+  "displayName": "Conflict-of-Interest Checker",
   "version": "1.0.0",
   "description": "Fuzzy-matches new-matter party names against your existing client/matter list — accounting for nicknames, entity-suffix variations, and misspellings — and returns a structured possible-conflict report. Never clears or declines a matter; the attorney makes every conflict determination.",
   "author": {
-    "name": "Protomated"
-  }
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/conflict-of-interest-checker",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "conflicts",
+    "conflict-check",
+    "intake",
+    "ethics",
+    "attorney",
+    "law-firm"
+  ]
 }

@@ -1,8 +1,21 @@
 {
   "name": "demand-letter-drafter",
+  "displayName": "Demand Letter Drafter",
   "version": "1.0.0",
   "description": "A demand-letter and client-correspondence drafter that populates your firm's own template with case facts and drafts plain-English client status updates — for solo and small-firm attorneys who draft near-identical correspondence by hand. Never sets a demand amount, never sends anything; attorney is author of record.",
   "author": {
-    "name": "Protomated"
-  }
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/demand-letter-drafter",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "demand-letter",
+    "client-correspondence",
+    "drafting",
+    "attorney",
+    "law-firm"
+  ]
 }

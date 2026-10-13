@@ -1,8 +1,22 @@
 {
   "name": "flat-fee-calculator",
+  "displayName": "Flat-Fee Repricing Calculator",
   "version": "1.0.2",
   "description": "Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.",
   "author": {
-    "name": "Protomated"
-  }
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/flat-fee-calculator",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "flat-fee",
+    "pricing",
+    "hourly-billing",
+    "revenue-modeling",
+    "attorney",
+    "law-firm"
+  ]
 }

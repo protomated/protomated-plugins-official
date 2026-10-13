@@ -1,8 +1,23 @@
 {
   "name": "solo-attorney-starter-kit",
+  "displayName": "Solo Attorney Starter Kit",
   "version": "2.4.0",
   "description": "A solo attorney operations assistant for Claude Desktop. Six skills: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, and new-matter organizer — from your local files, Gmail, and Google Calendar.",
   "author": {
-    "name": "Protomated"
-  }
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/solo-attorney-starter-kit",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "solo-attorney",
+    "intake",
+    "engagement-letter",
+    "court-deadlines",
+    "meeting-prep",
+    "billing-narrative",
+    "law-firm"
+  ]
 }

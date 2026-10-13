@@ -1,8 +1,21 @@
 {
   "name": "bar-compliant-marketing-reviewer",
+  "displayName": "Bar-Compliant Marketing Reviewer",
   "version": "1.0.0",
   "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
   "author": {
-    "name": "Protomated"
-  }
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/bar-compliant-marketing-reviewer",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "attorney-advertising",
+    "bar-rules",
+    "marketing",
+    "compliance",
+    "law-firm"
+  ]
 }
