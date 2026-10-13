@@ -13,3 +13,4 @@ out/
 .vercel/
 *.zip
 *.zip.sha256
+dist/

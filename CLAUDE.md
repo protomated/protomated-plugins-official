@@ -92,7 +92,7 @@ npm run site:deploy    # build + wrangler pages deploy to Cloudflare Pages
 ## Distribution channels
 
 1. **Marketplace (primary):** users add the repo (`/plugin marketplace add protomated/protomated-plugins-official` or Cowork → Customize → Plugins → Browse plugins) and install any plugin. Git-native — no packaging step.
-2. **Zip (secondary, Starter Kit only):** `npm run build` packs `solo-attorney-starter-kit/` into `solo-attorney-starter-kit-v$version.zip` + SHA-256, copied to `site/public/downloads/` and attached to GitHub Releases.
+2. **Zip (secondary):** `npm run build` packs `solo-attorney-starter-kit/` into `solo-attorney-starter-kit-v$version.zip` + SHA-256, copied to `site/public/downloads/`. On a release tag, CI also runs `npm run pack:all` (`scripts/pack-plugins.mjs`), which zips **every** plugin in marketplace.json to `dist/<plugin>-v<plugin.json version>.zip` + `.sha256` + `SHA256SUMS`, and attaches all of `dist/` to the GitHub Release.
 
 ## Releasing (zip channel)
 

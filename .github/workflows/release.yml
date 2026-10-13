@@ -25,12 +25,14 @@ jobs:
       
       - run: npm run build
 
+      - name: Package every plugin
+        run: npm run pack:all
+
       - name: Create GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           gh release create ${{ github.ref_name }} \
-            solo-attorney-starter-kit-v${{ steps.version.outputs.VERSION }}.zip \
-            solo-attorney-starter-kit-v${{ steps.version.outputs.VERSION }}.zip.sha256 \
-            --title "Solo Attorney Starter Kit ${{ github.ref_name }}" \
+            dist/* \
+            --title "Protomated Plugins ${{ github.ref_name }}" \
             --generate-notes
