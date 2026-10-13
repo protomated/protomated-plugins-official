@@ -4,6 +4,12 @@ on:
   push:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag (e.g. v2.4.0). Leave blank to use v<package.json version>. Created at the selected branch head if it does not exist; re-running replaces assets on an existing release.'
+        required: false
+        type: string
 
 jobs:
   release:
@@ -17,22 +23,35 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Extract version from tag
+      - name: Resolve release tag
         id: version
-        run: echo "VERSION=${GITHUB_REF_NAME#v}" >> $GITHUB_OUTPUT
+        run: |
+          if [ "${{ github.event_name }}" = "push" ]; then
+            TAG="${GITHUB_REF_NAME}"
+          elif [ -n "${{ inputs.tag }}" ]; then
+            TAG="${{ inputs.tag }}"
+          else
+            TAG="v$(node -p "require('./package.json').version")"
+          fi
+          echo "TAG=$TAG" >> "$GITHUB_OUTPUT"
 
       - run: npm ci
-      
+
       - run: npm run build
 
       - name: Package every plugin
         run: npm run pack:all
 
-      - name: Create GitHub Release
+      - name: Create or update GitHub Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TAG: ${{ steps.version.outputs.TAG }}
         run: |
-          gh release create ${{ github.ref_name }} \
-            dist/* \
-            --title "Protomated Plugins ${{ github.ref_name }}" \
-            --generate-notes
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" dist/* --clobber
+          else
+            gh release create "$TAG" dist/* \
+              --target "$GITHUB_SHA" \
+              --title "Protomated Plugins $TAG" \
+              --generate-notes
+          fi
