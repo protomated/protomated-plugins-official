@@ -1,19 +1,63 @@
-# Flat-Fee Repricing Calculator
+# Flat-Fee Repricing Calculator for Law Firms — Claude Desktop Plugin
 
-Standalone plugin with one skill: `/flat-fee-calculator`. Builds a revenue-impact model comparing hourly billing to flat-fee/value pricing for tasks you've sped up with AI tools — outputs a CSV with candidate flat-fee price points that preserve margin.
+A Claude Desktop plugin for solo and small-firm attorneys. One skill (`/flat-fee-calculator`): Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.
 
-Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want the full attorney skill set in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
+**Distributed by [Protomated](https://protomated.com) as a free download.**
 
-## Connectors
+**Works with:** Claude Desktop and ChatGPT Desktop.
 
-None required. This plugin works entirely from numbers you type in — no MCP connector or authorization step is required. Paste or re-type the output CSV wherever you want to keep it.
+---
 
-**Claude Desktop only — optional:** if you've connected Claude's built-in Filesystem connector (Settings → Connectors → Filesystem, independent of this plugin), the skill detects it automatically and offers to save the CSV straight to your chosen folder instead of pasting it. Nothing to install for this plugin specifically — just Claude's own connector, if you already use it. Not available on ChatGPT Desktop, which has no filesystem connector equivalent.
+## ⚠️ Required: Read This Before You Install
 
-## Compliance
+### 1. You must be on a qualifying Claude plan
 
-Every output carries the required header/footer: **AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED / Not legal advice.** This is a pricing/business model, not legal advice and not an opinion on your state bar's fee-reasonableness rules. No file is written without your explicit in-conversation confirmation. Do not use consumer-tier Claude (claude.ai Personal or Pro) with client-privileged content — see the Starter Kit README for plan-tier and ABA Op. 512 guidance.
+Do NOT use this plugin for client work on a consumer Claude plan (claude.ai Personal or Claude Pro). Consumer plans do not provide a Data Processing Agreement (DPA) covering client-privileged content. Use **Claude for Work**, **Claude Team/Enterprise**, or the **Claude API** with a signed DPA.
+
+### 2. This is a pricing/business model, not legal advice
+
+It does not verify your state bar's fee-reasonableness or flat-fee-specific rules — confirm those separately before repricing.
+
+### 3. No action without your confirmation
+
+The plugin is instructed to request your explicit in-conversation confirmation before writing any file.
+
+---
+
+## Installation (under 5 minutes)
+
+### Step 1 — Download and install
+
+1. Download `flat-fee-calculator.zip` from the [Releases page](https://github.com/protomated/claude-flat-fee-calculator/releases).
+2. Double-click the `.zip` file, or drag it into Claude Desktop's **Extensions** panel.
+3. Claude Desktop will install the plugin.
+
+### Step 2 — (Optional) Connect Filesystem
+
+This skill works entirely from numbers you type in — Filesystem is only needed if you want it to save the CSV model for you, or cross-check estimates against a saved billing-narrative output. See [CONNECTORS.md](CONNECTORS.md) for setup.
+
+### Step 3 — Verify
+
+Open a new Claude Desktop chat. Type `/skills`. You should see `/flat-fee-calculator` listed. Run it to start.
+
+### Using this in ChatGPT Desktop
+
+This skill also works in ChatGPT Desktop. Install the plugin the same way (Settings → Apps & Connectors → Plugins → Upload plugin archive), then start a new chat — no connector needed, the skill works from the numbers you type in.
+
+---
+
+## The Skill
+
+### `/flat-fee-calculator` — Flat-Fee Repricing Calculator
+
+Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.
+
+---
 
 ## License
 
-Apache 2.0.
+Apache 2.0. See [LICENSE](LICENSE).
+
+## Feedback and Issues
+
+[GitHub Issues](https://github.com/protomated/claude-flat-fee-calculator/issues) | [hello@protomated.com](mailto:hello@protomated.com)

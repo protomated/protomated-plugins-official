@@ -116,9 +116,9 @@ Show, in this order:
 
 ### Step 7 — Save to workspace (optional, with confirmation)
 
-Propose a destination, e.g. `pricing/[task-type]-repricing-model-[date].csv` at the top level of the connected Filesystem workspace (not inside a single matter folder, since this model applies across matters of a given type).
+Check whether Filesystem's tools are actually available to you in this conversation — do not assume it's disconnected just because no folder was referenced earlier in the conversation. If its tools are available, propose a destination, e.g. `pricing/[task-type]-repricing-model-[date].csv` at the top level of the connected Filesystem workspace (not inside a single matter folder, since this model applies across matters of a given type). If Filesystem's tools are genuinely unavailable, skip this step — tell the attorney to copy the CSV output instead.
 
-Do not write any file without explicit confirmation.
+Once the attorney confirms the proposed path, write the file by calling the Filesystem connector's own write tool — no other plugin's tools. **Do not substitute a Canvas/Artifact export, chat download link, or any other mechanism for actually writing through Filesystem** — those don't land in the attorney's configured workspace folder, which is the whole point of this step. If the write call itself fails or is rejected, say so plainly and offer the chat download as a fallback — don't silently swap mechanisms and claim the save is equivalent.
 
 ---
 
