@@ -4,11 +4,15 @@ Standalone plugin with one skill: `/research-memo`. Drafts a legal research memo
 
 Part of the [Protomated plugin marketplace](https://github.com/protomated/protomated-plugins-official). Want the full attorney skill set in one install? Use the **Solo Attorney Starter Kit** from the same marketplace.
 
+**Works with:** Claude Desktop and ChatGPT Desktop.
+
 ## Connectors
 
 | Connector | Used for |
 |---|---|
 | Filesystem | Reads the source-document folder and indexes each file; saves the memo only with your explicit confirmation |
+
+On Claude Desktop, connect Filesystem once via Settings → Connectors — see [CONNECTORS.md](CONNECTORS.md) for setup and troubleshooting. On ChatGPT Desktop, there's no Filesystem connector — attach or paste your source documents directly into the chat instead of giving a folder path.
 
 ## Compliance
 

@@ -13,6 +13,8 @@ Draft a legal research memo that answers your question using **only** the source
 
 **This skill only cites what you gave it. It never invents or infers a citation, and it never writes a file without your explicit confirmation.**
 
+**Scope boundary:** use only the Filesystem connector, and only if it's already connected — nothing else. Do not call another plugin's tools (e.g. Legal Billing Tracker's time-entry lookup) even if they appear available in this account.
+
 ## Why this skill exists
 
 Hallucinated citations are not a hypothetical risk — they are actively producing bar discipline and sanctions for practicing attorneys, including a Ninth Circuit six-month suspension of two immigration attorneys and DOJ sanctions threats against government counsel. Generic AI research tools that draw on open-ended training knowledge or unverified web search invite exactly this failure mode. This skill is built the opposite way: it treats "I don't have a source for that" as a valid and required answer, not a gap to paper over.
@@ -35,7 +37,7 @@ If no folder path is given, ask for one before proceeding. If the attorney names
 
 Confirm with the attorney:
 1. **The precise legal question** — if it's vague ("research breach of contract"), ask for the specific issue, the governing jurisdiction if relevant, and any facts the analysis should apply to.
-2. **The source folder path** — must be inside the connected Filesystem workspace.
+2. **The source documents** — on Claude Desktop, a folder path inside the connected Filesystem workspace. If Filesystem's tools aren't available in this conversation (for example, on ChatGPT Desktop), ask the attorney to attach or paste the source documents directly into the chat instead.
 3. **Matter context (optional)** — if a matter folder with `intake-summary.md` is identifiable, read it for party names and facts, but do not treat it as a legal-authority source; it informs the Statement of Facts, not the Discussion's citations.
 
 State the rule up front, once, so the attorney knows what's about to happen:
@@ -44,7 +46,7 @@ State the rule up front, once, so the attorney knows what's about to happen:
 
 ### Step 2 — Index the source documents
 
-Use the Filesystem connector to read every file in the source folder (and subfolders, one level deep). For each file, extract:
+Use the Filesystem connector to read every file in the source folder (and subfolders, one level deep) — or, if the attorney attached documents directly instead, index those. For each file, extract:
 - **Identifier** — case name/citation if it's a case, statute/section number if it's a statute, document title otherwise.
 - **What it is** — case, statute, regulation, brief, contract, deposition excerpt, etc.
 - **Page/paragraph structure** — note page numbers or numbered paragraphs so later citations can point to a specific location, not just the filename.
@@ -174,4 +176,4 @@ Confirm to save, or request changes.
 
 ---
 
-— Prepared with Protomated Solo Attorney Claude Starter Kit (Claude Desktop) | Attorney review required before use | Not legal advice
+— Prepared with Protomated Research Memo Drafter | Attorney review required before use | Not legal advice
