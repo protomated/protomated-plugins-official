@@ -33,7 +33,7 @@
     "defaultPrompt": [
       "Review this website copy against my state bar's advertising rules."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

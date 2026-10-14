@@ -36,7 +36,7 @@
       "Show my billing dashboard.",
       "What's still unpaid?"
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

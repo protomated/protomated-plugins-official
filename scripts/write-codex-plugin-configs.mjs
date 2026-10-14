@@ -143,7 +143,7 @@ for (const [plugin, override] of Object.entries(INTERFACE_OVERRIDES)) {
       privacyPolicyURL: "https://protomated.com/privacy",
       termsOfServiceURL: "https://protomated.com/terms",
       defaultPrompt: override.defaultPrompt,
-      ...(hasIcon ? { composerIcon: "../.claude-plugin/icon.png", logo: "../.claude-plugin/icon.png" } : {}),
+      ...(hasIcon ? { composerIcon: "./.claude-plugin/icon.png", logo: "./.claude-plugin/icon.png" } : {}),
     },
   };
 

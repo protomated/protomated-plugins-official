@@ -36,7 +36,7 @@
       "Draft a support letter for this immigration filing.",
       "Draft an RFE-response outline from these case facts."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

@@ -34,7 +34,7 @@
     "defaultPrompt": [
       "Check this new matter's parties against our client list for conflicts."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

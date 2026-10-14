@@ -35,7 +35,7 @@
     "defaultPrompt": [
       "Draft a research memo from the attached case law on this issue."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

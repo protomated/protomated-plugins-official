@@ -36,7 +36,7 @@
       "Build a flat-fee repricing model for an uncontested divorce package.",
       "Model flat-fee pricing for standard NDA review."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }

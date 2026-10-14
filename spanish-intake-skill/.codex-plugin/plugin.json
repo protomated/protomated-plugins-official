@@ -36,7 +36,7 @@
       "Turn these Spanish intake notes into an English intake summary.",
       "Translate this client email into Spanish."
     ],
-    "composerIcon": "../.claude-plugin/icon.png",
-    "logo": "../.claude-plugin/icon.png"
+    "composerIcon": "./.claude-plugin/icon.png",
+    "logo": "./.claude-plugin/icon.png"
   }
 }
