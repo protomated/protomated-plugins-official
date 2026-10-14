@@ -1,6 +1,6 @@
 {
   "name": "legal-billing",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Track billable hours, generate invoices, manage trust accounts, and check revenue — all by chatting naturally. Free replacement for Clio and PracticePanther billing modules for solo attorneys.",
   "author": {
     "name": "Protomated",
