@@ -1,0 +1,41 @@
+{
+  "name": "estate-planning-document-assembler",
+  "version": "1.0.0",
+  "description": "An estate planning document assembler that populates a basic will, healthcare POA, financial POA, and HIPAA authorization from one intake pass — using your firm's templates, or generic placeholders if none are attached — for solo and small-firm estate planning attorneys who assemble near-identical document sets by hand. Never determines execution requirements or which documents a client needs; attorney reviews and finalizes every document before the client signs.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/estate-planning-document-assembler",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "estate-planning",
+    "wills",
+    "power-of-attorney",
+    "hipaa",
+    "document-assembly",
+    "attorney"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Estate Planning Document Assembler",
+    "shortDescription": "Assemble a will, POAs, and HIPAA authorization from one intake pass.",
+    "longDescription": "An estate planning document assembler that populates a basic will, healthcare POA, financial POA, and HIPAA authorization from one intake pass — using your firm's templates, or generic placeholders if none are attached — for solo and small-firm estate planning attorneys who assemble near-identical document sets by hand. Never determines execution requirements or which documents a client needs; attorney reviews and finalizes every document before the client signs.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Assemble estate planning documents from this client intake."
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}

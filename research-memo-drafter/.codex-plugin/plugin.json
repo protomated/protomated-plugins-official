@@ -1,0 +1,41 @@
+{
+  "name": "research-memo-drafter",
+  "version": "1.0.0",
+  "description": "Draft a legal research memo that cites only the source documents (cases, statutes, briefs, contracts) you've attached to a workspace folder — no open web search, no case-law database, no citation drawn from general training knowledge. Every citation is anchored to a specific source file and page/paragraph, and any part of the question the sources don't support is flagged, never quietly filled in. Use when you have the authorities on hand and need a first-draft memo built strictly from them.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/research-memo-drafter",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "legal-research",
+    "memo",
+    "citations",
+    "source-grounded",
+    "attorney",
+    "law-firm"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Research Memo Drafter",
+    "shortDescription": "Draft a legal research memo strictly from your attached source documents.",
+    "longDescription": "Draft a legal research memo that cites only the source documents (cases, statutes, briefs, contracts) you've attached to a workspace folder — no open web search, no case-law database, no citation drawn from general training knowledge. Every citation is anchored to a specific source file and page/paragraph, and any part of the question the sources don't support is flagged, never quietly filled in. Use when you have the authorities on hand and need a first-draft memo built strictly from them.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Draft a research memo from the attached case law on this issue."
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}

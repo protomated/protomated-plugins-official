@@ -1,0 +1,42 @@
+{
+  "name": "legal-billing",
+  "version": "1.0.2",
+  "description": "Track billable hours, generate invoices, manage trust accounts, and check revenue — all by chatting naturally. Free replacement for Clio and PracticePanther billing modules for solo attorneys.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://protomated.com/templates/legal-billing-time-tracker/",
+  "license": "MIT",
+  "keywords": [
+    "legal",
+    "billing",
+    "time-tracking",
+    "trust-accounting",
+    "invoicing",
+    "attorney",
+    "law-firm"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Legal Billing and Time Tracker",
+    "shortDescription": "Track billable hours, invoices, and trust accounts by chatting naturally.",
+    "longDescription": "Track billable hours, generate invoices, manage trust accounts, and check revenue — all by chatting naturally. Free replacement for Clio and PracticePanther billing modules for solo attorneys.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Log 1.5 hours for John Smith at $300.",
+      "Show my billing dashboard.",
+      "What's still unpaid?"
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}

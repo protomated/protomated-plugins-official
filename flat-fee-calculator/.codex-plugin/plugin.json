@@ -1,0 +1,42 @@
+{
+  "name": "flat-fee-calculator",
+  "version": "1.0.2",
+  "description": "Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/flat-fee-calculator",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "flat-fee",
+    "pricing",
+    "hourly-billing",
+    "revenue-modeling",
+    "attorney",
+    "law-firm"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Flat-Fee Repricing Calculator",
+    "shortDescription": "Model flat-fee pricing from AI-driven efficiency gains.",
+    "longDescription": "Build a revenue-impact model comparing hourly billing to flat-fee pricing for tasks you've sped up with AI tools. Takes your current hourly rate, typical task time before/after using AI, and matter volume, then outputs a CSV with candidate flat-fee price points that preserve margin. Pricing/business modeling only, no legal advice implications.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Build a flat-fee repricing model for an uncontested divorce package.",
+      "Model flat-fee pricing for standard NDA review."
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}

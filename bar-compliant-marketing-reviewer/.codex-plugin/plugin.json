@@ -1,0 +1,39 @@
+{
+  "name": "bar-compliant-marketing-reviewer",
+  "version": "1.0.0",
+  "description": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/bar-compliant-marketing-reviewer",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "attorney-advertising",
+    "bar-rules",
+    "marketing",
+    "compliance",
+    "law-firm"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Bar-Compliant Marketing Reviewer",
+    "shortDescription": "Flag non-compliant language in attorney marketing before it goes live.",
+    "longDescription": "Reviews attorney marketing materials — websites, social posts, ads, email campaigns — against your state bar's advertising rules and flags non-compliant language before it goes live.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Review this website copy against my state bar's advertising rules."
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}

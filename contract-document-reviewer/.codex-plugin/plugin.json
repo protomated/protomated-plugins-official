@@ -1,0 +1,41 @@
+{
+  "name": "contract-document-reviewer",
+  "version": "1.0.0",
+  "description": "A contract review assistant that reviews a contract clause-by-clause against a configurable playbook — flagging each clause GREEN, YELLOW, or RED with plain-English rationale and suggested redline language — using your firm's own playbook, or a generic clause playbook if none is attached. Never decides whether to sign or reject a contract, and never sends, files, or executes anything; attorney reviews and finalizes every position before use.",
+  "author": {
+    "name": "Protomated",
+    "url": "https://protomated.com"
+  },
+  "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/contract-document-reviewer",
+  "repository": "https://github.com/protomated/protomated-plugins-official",
+  "license": "Apache-2.0",
+  "keywords": [
+    "legal",
+    "contract-review",
+    "playbook",
+    "redlines",
+    "clause-analysis",
+    "attorney",
+    "law-firm"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Contract Document Reviewer",
+    "shortDescription": "Review contracts clause-by-clause against your firm's playbook.",
+    "longDescription": "A contract review assistant that reviews a contract clause-by-clause against a configurable playbook — flagging each clause GREEN, YELLOW, or RED with plain-English rationale and suggested redline language — using your firm's own playbook, or a generic clause playbook if none is attached. Never decides whether to sign or reject a contract, and never sends, files, or executes anything; attorney reviews and finalizes every position before use.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Review this contract against our standard playbook."
+    ],
+    "composerIcon": "../.claude-plugin/icon.png",
+    "logo": "../.claude-plugin/icon.png"
+  }
+}
