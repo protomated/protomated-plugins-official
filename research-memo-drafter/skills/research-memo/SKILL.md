@@ -33,11 +33,24 @@ If no folder path is given, ask for one before proceeding. If the attorney names
 
 ## Workflow
 
-### Step 1 — Gather the question and the source set
+### Step 0 — Check for the Filesystem connector immediately, before asking anything
+
+As soon as this skill is invoked, before asking the attorney any question, check for yourself whether documents are already available — do not wait to be told to "check the filesystem" or "check for attachments." Do this in one pass:
+
+1. Look at whether files were attached directly to this chat message.
+2. Separately, check whether the Filesystem connector's tools are present in this conversation. If they are, treat the connector as connected and use its tools (e.g. list/search) to check what folder, if any, is already in scope and what it contains. Do not ask the attorney whether Filesystem is connected — check, then report what you found.
+3. If a folder path was given in the invocation (e.g. `/research-memo [question] — [path]`), read that path directly via Filesystem rather than asking for it again.
+
+Report the outcome precisely, since the attorney may not know whether they connected Filesystem or attached anything:
+- **Filesystem connector not available in this conversation, and nothing attached to the chat:** say so plainly — "No folder is connected via the Filesystem connector, and no documents are attached to this chat." Then explain both options: attach the source documents directly to this chat, or connect a folder via Claude Desktop → Settings → Connectors → Filesystem.
+- **Filesystem connector available, but no folder selected within it (or the selected folder is empty):** say so plainly — "The Filesystem connector is connected, but I don't see any source documents in it yet." Ask the attorney to select/attach the right folder, or to give the folder path directly.
+- **Documents found (via chat attachment, Filesystem folder, or the path given in the invocation):** proceed directly to Step 2 — don't ask the attorney to re-confirm something you can already see.
+
+### Step 1 — Gather the question and confirm the source set
 
 Confirm with the attorney:
 1. **The precise legal question** — if it's vague ("research breach of contract"), ask for the specific issue, the governing jurisdiction if relevant, and any facts the analysis should apply to.
-2. **The source documents** — on Claude Desktop, a folder path inside the connected Filesystem workspace. If Filesystem's tools aren't available in this conversation (for example, on ChatGPT Desktop), ask the attorney to attach or paste the source documents directly into the chat instead.
+2. **The source documents** — from whatever Step 0 found. If Step 0 found nothing and Filesystem's tools aren't available in this conversation at all (for example, on ChatGPT Desktop), ask the attorney to attach or paste the source documents directly into the chat instead.
 3. **Matter context (optional)** — if a matter folder with `intake-summary.md` is identifiable, read it for party names and facts, but do not treat it as a legal-authority source; it informs the Statement of Facts, not the Discussion's citations.
 
 State the rule up front, once, so the attorney knows what's about to happen:
