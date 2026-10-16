@@ -38,7 +38,7 @@ If no folder path is given, ask for one before proceeding. If the attorney names
 As soon as this skill is invoked, before asking the attorney any question, check for yourself whether documents are already available — do not wait to be told to "check the filesystem" or "check for attachments." Do this in one pass:
 
 1. Look at whether files were attached directly to this chat message.
-2. Separately, check whether the Filesystem connector's tools are present in this conversation. If they are, treat the connector as connected and use its tools (e.g. list/search) to check what folder, if any, is already in scope and what it contains. Do not ask the attorney whether Filesystem is connected — check, then report what you found.
+2. Separately, check whether the Filesystem connector's tools are present in this conversation. If they are, treat the connector as connected and actually call its directory-listing tool (e.g. "List Allowed Directories") to find out what folder, if any, is already in scope and what it contains — the tool schema being available is not the same as having checked. Do not ask the attorney whether Filesystem is connected, and do not state that nothing is connected, without having made that call.
 3. If a folder path was given in the invocation (e.g. `/research-memo [question] — [path]`), read that path directly via Filesystem rather than asking for it again.
 
 Report the outcome precisely, since the attorney may not know whether they connected Filesystem or attached anything:

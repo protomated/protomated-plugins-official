@@ -1,7 +1,7 @@
 {
   "name": "solo-attorney-starter-kit",
   "displayName": "Solo Attorney Starter Kit",
-  "version": "2.4.7",
+  "version": "2.4.8",
   "description": "A solo attorney operations assistant for Claude Desktop. Six skills: intake summary, engagement letter, court deadline reasoning, meeting prep brief, billing narrative drafter, and new-matter organizer — from your local files, Gmail, and Google Calendar.",
   "author": {
     "name": "Protomated",
