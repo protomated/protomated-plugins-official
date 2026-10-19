@@ -1,7 +1,7 @@
 {
   "name": "estate-planning-document-assembler",
   "displayName": "Estate Planning Document Assembler",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "An estate planning document assembler that populates a basic will, healthcare POA, financial POA, and HIPAA authorization from one intake pass — using your firm's templates, or generic placeholders if none are attached — for solo and small-firm estate planning attorneys who assemble near-identical document sets by hand. Never determines execution requirements or which documents a client needs; attorney reviews and finalizes every document before the client signs.",
   "author": {
     "name": "Protomated",
@@ -10,6 +10,7 @@
   "homepage": "https://github.com/protomated/protomated-plugins-official/tree/main/estate-planning-document-assembler",
   "repository": "https://github.com/protomated/protomated-plugins-official",
   "license": "Apache-2.0",
+  "privacyPolicyUrl": "https://protomated.com/privacy",
   "keywords": [
     "legal",
     "estate-planning",
