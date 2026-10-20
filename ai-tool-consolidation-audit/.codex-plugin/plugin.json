@@ -1,0 +1,25 @@
+{
+  "name": "ai-tool-consolidation-audit",
+  "version": "1.0.2",
+  "description": "An AI-tool audit assistant that runs a short guided interview on which AI tools your firm uses, for what, and with what data — flagging data-handling risks and redundant tools, and recommending genuine consolidation candidates onto a governed Claude + MCP stack, mapped to your firm's actual workflows. Never certifies compliance with any bar rule or security standard, and never accesses or changes anything at any vendor; you review and confirm the audit before treating it as current.",
+  "author": {
+    "name": "Protomated"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ai-tool-consolidation-audit",
+    "shortDescription": "Audit your firm's AI tools for data-handling risk and consolidation candidates.",
+    "longDescription": "An AI-tool audit assistant that runs a short guided interview on which AI tools your firm uses, for what, and with what data — flagging data-handling risks and redundant tools, and recommending genuine consolidation candidates onto a governed Claude + MCP stack, mapped to your firm's actual workflows. Never certifies compliance with any bar rule or security standard, and never accesses or changes anything at any vendor; you review and confirm the audit before treating it as current.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Run an AI tool consolidation audit for my firm."
+    ]
+  }
+}

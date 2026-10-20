@@ -110,6 +110,30 @@ const INTERFACE_OVERRIDES = {
       "Translate this client email into Spanish.",
     ],
   },
+  "ai-tool-consolidation-audit": {
+    shortDescription: "Audit your firm's AI tools for data-handling risk and consolidation candidates.",
+    category: "Legal",
+    capabilities: ["Read"],
+    defaultPrompt: [
+      "Run an AI tool consolidation audit for my firm.",
+    ],
+  },
+  "ai-use-policy-generator": {
+    shortDescription: "Draft an internal AI-use policy and client-disclosure clause.",
+    category: "Legal",
+    capabilities: ["Read", "Write"],
+    defaultPrompt: [
+      "Draft an AI-use policy and client-disclosure clause for my firm.",
+    ],
+  },
+  "lead-intake-brief-generator": {
+    shortDescription: "Turn intake notes into a one-page consult-prep and lead-triage brief.",
+    category: "Legal",
+    capabilities: ["Read", "Write"],
+    defaultPrompt: [
+      "Draft a lead intake brief from these consultation notes.",
+    ],
+  },
 };
 
 for (const [plugin, override] of Object.entries(INTERFACE_OVERRIDES)) {
@@ -140,7 +164,7 @@ for (const [plugin, override] of Object.entries(INTERFACE_OVERRIDES)) {
       category: override.category,
       capabilities: override.capabilities,
       websiteURL: claude.author?.url ?? "https://protomated.com",
-      privacyPolicyURL: "https://protomated.com/privacy",
+      privacyPolicyURL: claude.privacyPolicyUrl ?? "https://protomated.com/privacy",
       termsOfServiceURL: "https://protomated.com/terms",
       defaultPrompt: override.defaultPrompt,
       ...(hasIcon ? { composerIcon: "./.claude-plugin/icon.png", logo: "./.claude-plugin/icon.png" } : {}),

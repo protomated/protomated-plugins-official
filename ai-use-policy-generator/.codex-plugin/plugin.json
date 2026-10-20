@@ -1,0 +1,26 @@
+{
+  "name": "ai-use-policy-generator",
+  "version": "1.0.2",
+  "description": "A guided interview that drafts your firm's internal AI-use policy, a client-facing AI-disclosure clause for engagement letters, and a one-page safe AI checklist — tailored to your tools, practice areas, and jurisdiction.",
+  "author": {
+    "name": "Protomated"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "ai-use-policy-generator",
+    "shortDescription": "Draft an internal AI-use policy and client-disclosure clause.",
+    "longDescription": "A guided interview that drafts your firm's internal AI-use policy, a client-facing AI-disclosure clause for engagement letters, and a one-page safe AI checklist — tailored to your tools, practice areas, and jurisdiction.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Draft an AI-use policy and client-disclosure clause for my firm."
+    ]
+  }
+}

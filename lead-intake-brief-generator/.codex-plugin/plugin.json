@@ -1,0 +1,26 @@
+{
+  "name": "lead-intake-brief-generator",
+  "version": "1.0.2",
+  "description": "A consult-prep and lead-triage assistant that turns attorney-supplied intake notes, an email thread, or uploaded documents into a one-page brief — parties, dates, matter-type suggestion, urgency flag, open questions, recommended next step. Suggestion only: never accepts, declines, routes, or assigns a lead, never runs a conflict check, and never computes a deadline; you review and decide before acting on any lead.",
+  "author": {
+    "name": "Protomated"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "lead-intake-brief-generator",
+    "shortDescription": "Turn intake notes into a one-page consult-prep and lead-triage brief.",
+    "longDescription": "A consult-prep and lead-triage assistant that turns attorney-supplied intake notes, an email thread, or uploaded documents into a one-page brief — parties, dates, matter-type suggestion, urgency flag, open questions, recommended next step. Suggestion only: never accepts, declines, routes, or assigns a lead, never runs a conflict check, and never computes a deadline; you review and decide before acting on any lead.",
+    "developerName": "Protomated",
+    "category": "Legal",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://protomated.com",
+    "privacyPolicyURL": "https://protomated.com/privacy",
+    "termsOfServiceURL": "https://protomated.com/terms",
+    "defaultPrompt": [
+      "Draft a lead intake brief from these consultation notes."
+    ]
+  }
+}
