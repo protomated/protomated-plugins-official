@@ -9,6 +9,8 @@ argument-hint: "[optional: which contract to review, if more than one is attache
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED BEFORE USE
 > Reviewed against the playbook you provided. Does not determine whether to sign, negotiate, or reject this contract, and does not verify enforceability under governing law. No tracked changes are applied to your document — copy any suggested redline into your own file yourself. Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill reviews an attached contract clause by clause against a playbook — your firm's own `playbook.md` if you've attached one, or this plugin's bundled generic playbook (`playbooks/generic-playbook.md`) if you haven't.
 
 **This skill reviews from what you provide.** It never invents contract language that isn't in the attached contract, and it never invents a firm position that isn't encoded in the playbook it's using. It never decides whether you or your client should sign, walk away from, or accept the contract, never determines a clause's enforceability under governing law, and never sends, files, or executes anything. A clause type the playbook doesn't cover is left UNRATED — never guessed.
@@ -121,6 +123,8 @@ Does this look right? You can:
 - If asked whether a clause is enforceable, whether to sign, or how to negotiate beyond the playbook's own position, decline and explain that's the attorney's call — point to the UNRATED or RED finding as the reference point, not a directive.
 
 Do not mark a review ready for use in negotiation until the attorney confirms it. Never send, file, execute, e-sign, or transmit the contract or the review to any party — the attorney handles negotiation and execution entirely outside this skill.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

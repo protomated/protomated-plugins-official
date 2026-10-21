@@ -9,6 +9,8 @@ argument-hint: "[optional: 'demand letter' or 'status update' — the skill asks
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED
 > Drafted from the case facts and template you provided. Does not verify accuracy, completeness, or legal sufficiency, and does not set a demand amount or assess liability. You are the author of record — review, revise, and send it yourself.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill drafts one of two things from an attached case folder:
 
 1. **A first-pass demand letter** — populates your firm's demand-letter template with the case facts you've provided.
@@ -114,6 +116,8 @@ Does this look right? You can:
 - Offer: "Want to draft the [other type] for this matter too?"
 
 Do not mark a draft ready until the attorney confirms it. Never send, file, submit, or transmit the letter or email anywhere — the attorney is the author of record and sends it themselves.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

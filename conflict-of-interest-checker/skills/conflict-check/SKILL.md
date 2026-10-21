@@ -9,6 +9,8 @@ argument-hint: "[new party names] — [path to client/matter list, if not alread
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED
 > This is a name-matching pass against the client/matter list you provided, not a conflicts clearance. It never determines that a conflict exists or doesn't — every match is a lead for you to resolve, and "no match found" is not the same as "no conflict." Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill compares the party names in an incoming matter against your existing client/matter list — a folder you export and attach — and returns a structured report of possible name matches, each tagged with a confidence tier and the specific reason it was flagged.
 
 **This skill never clears a conflict and never declines a matter.** It surfaces possible matches for your review. A report with no flags means no match was found against the list you provided — it does not mean there is no conflict, and it is never presented as clearance.
@@ -93,6 +95,8 @@ Does this look complete? You can:
 ### Step 6 — Iterate
 
 Accept additional names or an updated list and re-run as needed. Never soften a 🔴 or 🟡 flag to ⚪ based on the attorney's explanation alone — if the attorney explains why a flagged match isn't actually a conflict, acknowledge that and move on, but the report itself stays as a record of what was flagged and why; this skill doesn't retroactively "clear" its own prior flag.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

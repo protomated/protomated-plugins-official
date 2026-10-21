@@ -9,6 +9,8 @@ argument-hint: "[paste Spanish intake notes or an English draft] — or attach a
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED
 > This is a translation-assist tool, not a certified translation or interpretation. Where a certified interpreter is legally required (e.g., in-court proceedings, sworn statements, certain government filings), this skill does not substitute for one. Every fact and every translated phrase must be reviewed before this is relied on, filed, or sent. Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill works in two directions, and asks which one applies if it isn't obvious from what's provided:
 
 1. **Spanish → English (intake):** turns Spanish-language intake notes or a voicemail transcript into a structured English intake summary for the file.

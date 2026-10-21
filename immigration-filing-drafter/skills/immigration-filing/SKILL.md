@@ -9,6 +9,8 @@ argument-hint: "[optional: attach a case folder with case facts and the firm's o
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED BEFORE FILING OR SENDING
 > Drafted only from the case facts and firm template you provided — not a legal assessment of the case, and not a citation of current immigration law. Verify every fact, confirm every filing requirement and deadline yourself, and review for legal sufficiency before filing with USCIS or sending to the client. Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill turns case facts and the firm's own filing templates into two kinds of draft: **filing narrative sections** (a support letter, a cover letter, or an RFE-response outline) and **client status-update emails** (a plain-English update the attorney can send after reporting what changed in the case).
 
 **This skill drafts from what you supply.** It never invents a case fact — a name, a date, a filing history detail, a relationship — that wasn't in the attached case folder or typed into the chat; anything missing is flagged as a placeholder, never filled in with a "typical" immigration case detail. It never predicts whether a case will be approved or assesses how strong it is, and it never writes the legal argument or cites a statute, regulation, or case law from its own knowledge — it organizes the facts and evidence you supply into the structure your firm's template calls for. It never calculates or states a specific USCIS filing or response deadline — that's your firm's docketing system's job, not this skill's. And it never looks up a case's status, logs into a USCIS account, or files or sends anything itself — every output is a draft, in chat, for you to review, finalize, and send yourself.
@@ -103,6 +105,8 @@ Does this look right? You can:
 - If asked to check the case's status with USCIS, log into a USCIS account, or file or send anything itself, decline — this skill drafts text only; the attorney or firm staff files and sends everything.
 
 Never mark a draft as filed, sent, or final. Never look up, log into, or submit anything to USCIS — this skill's only output is chat text.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

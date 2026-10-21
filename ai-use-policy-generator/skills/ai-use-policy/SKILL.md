@@ -14,6 +14,8 @@ verified_against:
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED
 > These documents are starting drafts generated from your interview answers. Do not adopt or distribute any of them without your independent review, necessary customization, and formal firm adoption. This is not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 Conduct a short guided interview, then produce three documents:
 
 1. **Internal AI-Use Policy** — the firm-facing governance document

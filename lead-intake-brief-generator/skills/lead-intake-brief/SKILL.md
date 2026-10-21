@@ -12,6 +12,8 @@ freshness_category: procedural
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED BEFORE ACTING
 > Drafted only from the intake notes you provided — not a legal-merits assessment, not a conflict check, and not an intake decision. Review every section, confirm accuracy, run your own conflict check, and decide whether to schedule, decline, or request more information before acting on this lead.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill turns raw intake material — notes from an intake call, an email thread, or uploaded documents — into a one-page brief an attorney can scan before a consult: **Parties**, **Dates**, **Matter-Type Suggestion**, **Urgency Flag**, **Open Questions**, and **Recommended Next Step**.
 
 **This skill drafts from what you supply.** It never invents a party, a date, or a case detail that wasn't in the intake material; anything missing is flagged as a placeholder. Its matter-type suggestion is a categorization guess, never a legal-merits assessment of whether the case is viable or worth taking. Its urgency flag reflects only what the intake material actually states — an explicit deadline, the lead's own expressed urgency, a mentioned upcoming date — never a statute-of-limitations or other deadline the skill calculates itself. It never runs or claims to run a conflict-of-interest check; a possible conflict becomes an open question for the attorney to check, not a resolved answer. And its recommended next step is always a suggestion — the skill never accepts, declines, routes, or assigns the lead, and never contacts the lead itself.
@@ -89,6 +91,8 @@ Does this look right? You can:
 - If asked to accept, decline, route, assign, or respond to the lead — including sending any message to the prospective client — decline; this skill drafts an internal brief only, and every intake decision and every outbound action stays with the attorney or firm staff.
 
 Never mark a brief as the firm's intake decision. Never contact, route, or respond to the lead — this skill's only output is chat text for the attorney.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

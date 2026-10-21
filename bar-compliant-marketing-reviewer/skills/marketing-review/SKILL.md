@@ -9,6 +9,8 @@ argument-hint: "[optional: which state(s) to check against, or which piece of co
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED BEFORE USE
 > Reviewed against ABA Model Rules 7.1–7.3 and the state rule references bundled with this skill. Does not confirm the copy is compliant, does not verify any factual claim in the copy, and does not file or submit anything to any state bar. Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill reviews a piece of draft marketing copy — a website page, ad, social post, or response to a client review — against ABA Model Rules 7.1–7.3 (`reference/model-rules-7.1-7.3.md`) and, for the state(s) the attorney configures, the state-specific advertising rules bundled in `reference/state-variations.md`.
 
 **This skill flags for review — it never clears copy for use.** It does not tell the attorney a piece of copy "is compliant" or "passes." It points at specific language, cites the specific rule provision it may conflict with, and suggests a compliant rewording — the attorney makes the final call on every flag before the copy goes live.
@@ -105,6 +107,8 @@ Does this look right? You can:
 - If asked whether the copy is safe to publish, decline to give a yes/no and point back to the specific flags instead — that determination is the attorney's, not this skill's.
 
 Do not mark a review final until the attorney confirms it. Never publish, post, submit, or file the copy or the review anywhere — the attorney publishes it themselves after making their own call on every flag.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 

@@ -12,6 +12,8 @@ freshness_category: procedural
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED BEFORE USE
 > Based on what you report about your firm's AI tools — not a security assessment, and not a certification of compliance with any bar rule or ethics opinion. Verify unconfirmed data-handling terms directly with each vendor before relying on this audit. Not legal advice.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header above and close with the compliance footer shown in this skill's output template, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up — every message that touches this skill's output, with no exceptions.
+
 This skill runs a short guided interview on the AI tools your firm currently uses, then produces an inventory audit: which tools handle sensitive data without confirmed protection, which tools duplicate each other, and which workflows are genuine candidates for consolidating onto a governed Claude + MCP stack — and which tools should stay exactly where they are.
 
 **This skill audits from what you report.** It never asserts what a named vendor's current data-handling terms are from its own general knowledge — vendor terms change, and a stale or wrong claim here is worse than no claim at all. If you don't know a tool's data-handling status, the skill marks it UNCONFIRMED and tells you to verify it with the vendor or your account admin — it never guesses "probably fine." It never recommends replacing a tool without tying that recommendation to a workflow you actually described, and it never recommends replacing a genuinely specialized tool (docketing/deadline engines, practice management systems, e-discovery, e-signature) just because it's an AI tool alongside others. It never logs into, changes a setting on, migrates data from, or cancels anything at any vendor — every output is chat text for you to act on yourself.
@@ -140,6 +142,8 @@ Does this look right? You can:
 - If asked to actually migrate tools, cancel a subscription, or set up the recommended stack, decline — this skill produces the audit and recommendation only; carrying it out is the firm's decision and action, or a separate engagement.
 
 Do not treat an audit as the firm's system of record until the attorney (or whoever ran the interview) confirms it. Never access, log into, change, migrate data from, or cancel anything at any vendor — this skill's only output is chat text.
+
+**Every one of these revision responses still opens with the compliance header and closes with the compliance footer** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 ---
 
