@@ -88,7 +88,7 @@ Does this look right? You can:
 • Ask for the other draft type (narrative section or status email) for the same matter
 • Ask me to revise a section after you've supplied the missing fact or argument
 
-— Drafted with Protomated Immigration Filing & Status Update Drafting Skill (Claude Desktop) | Verify before filing | Not legal advice
+— Drafted with Protomated Immigration Filing & Status Update Drafting Skill | Verify before filing | Not legal advice
 ```
 
 ---
@@ -119,4 +119,4 @@ Never mark a draft as filed, sent, or final. Never look up, log into, or submit 
 
 ---
 
-— Drafted with Protomated Immigration Filing & Status Update Drafting Skill (Claude Desktop) | Verify before filing | Not legal advice
+— Drafted with Protomated Immigration Filing & Status Update Drafting Skill | Verify before filing | Not legal advice

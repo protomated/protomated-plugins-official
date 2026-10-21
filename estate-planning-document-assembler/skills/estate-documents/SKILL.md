@@ -113,7 +113,7 @@ Does this look right? You can:
 • Correct any facts and I'll redraft
 • Give me the missing fields for any blocked document and I'll draft it
 
-— Drafted with Protomated Estate Planning Document Assembler (Claude Desktop) | Verify before use | Not legal advice
+— Drafted with Protomated Estate Planning Document Assembler | Verify before use | Not legal advice
 ```
 
 ---
@@ -139,4 +139,4 @@ Do not mark a document set ready for execution until the attorney confirms it. N
 
 ---
 
-— Drafted with Protomated Estate Planning Document Assembler (Claude Desktop) | Verify before use | Not legal advice
+— Drafted with Protomated Estate Planning Document Assembler | Verify before use | Not legal advice

@@ -109,7 +109,7 @@ Does this look right? You can:
 • Attach your firm's own playbook and I'll re-run the review against it
 • Correct any misread contract language and I'll re-rate that clause
 
-— Reviewed with Protomated Contract & Document Reviewer (Claude Desktop) | Verify before use | Not legal advice
+— Reviewed with Protomated Contract & Document Reviewer | Verify before use | Not legal advice
 ```
 
 ---
@@ -136,4 +136,4 @@ Do not mark a review ready for use in negotiation until the attorney confirms it
 
 ---
 
-— Reviewed with Protomated Contract & Document Reviewer (Claude Desktop) | Verify before use | Not legal advice
+— Reviewed with Protomated Contract & Document Reviewer | Verify before use | Not legal advice

@@ -102,7 +102,7 @@ Does this look right? You can:
 • Correct any facts and I'll redraft
 • Tell me the demand amount and I'll drop it in
 
-— Drafted with Protomated Demand Letter & Correspondence Drafter (Claude Desktop) | Verify before sending | Not legal advice
+— Drafted with Protomated Demand Letter & Correspondence Drafter | Verify before sending | Not legal advice
 ```
 
 ---
@@ -127,4 +127,4 @@ Do not mark a draft ready until the attorney confirms it. Never send, file, subm
 
 ---
 
-— Drafted with Protomated Demand Letter & Correspondence Drafter (Claude Desktop) | Verify before sending | Not legal advice
+— Drafted with Protomated Demand Letter & Correspondence Drafter | Verify before sending | Not legal advice

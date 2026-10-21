@@ -87,7 +87,7 @@ Does this look complete? You can:
 • Attach an updated or more complete client/matter list and I'll re-run the check
 • Ask me to explain how a specific match was flagged
 
-— Checked with Protomated Conflict-of-Interest Checker (Claude Desktop) | Attorney determination required | Not legal advice
+— Checked with Protomated Conflict-of-Interest Checker | Attorney determination required | Not legal advice
 ```
 
 ### Step 6 — Iterate
@@ -106,4 +106,4 @@ Accept additional names or an updated list and re-run as needed. Never soften a 
 
 ---
 
-— Checked with Protomated Conflict-of-Interest Checker (Claude Desktop) | Attorney determination required | Not legal advice
+— Checked with Protomated Conflict-of-Interest Checker | Attorney determination required | Not legal advice

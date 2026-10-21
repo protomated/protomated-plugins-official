@@ -131,4 +131,4 @@ Confirm this reads right, or tell me what to adjust (register, regional word cho
 
 ---
 
-— Prepared with Protomated Spanish Intake & Client Communication Skill (Claude Desktop) | Attorney (or certified interpreter) review required | Not legal advice
+— Prepared with Protomated Spanish Intake & Client Communication Skill | Attorney (or certified interpreter) review required | Not legal advice

@@ -93,7 +93,7 @@ Does this look right? You can:
 • Add or change which state(s) I'm checking against
 • Correct any fact I got wrong about the copy and I'll re-flag
 
-— Reviewed with Protomated Bar-Compliant Marketing Reviewer (Claude Desktop) | Verify before publishing | Not legal advice
+— Reviewed with Protomated Bar-Compliant Marketing Reviewer | Verify before publishing | Not legal advice
 ```
 
 ---
@@ -119,4 +119,4 @@ Do not mark a review final until the attorney confirms it. Never publish, post, 
 
 ---
 
-— Reviewed with Protomated Bar-Compliant Marketing Reviewer (Claude Desktop) | Verify before publishing | Not legal advice
+— Reviewed with Protomated Bar-Compliant Marketing Reviewer | Verify before publishing | Not legal advice
