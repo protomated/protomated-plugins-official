@@ -9,6 +9,8 @@ argument-hint: "[optional: which document(s) — 'will', 'healthcare poa', 'fina
 > ⚠️ AI-ASSISTED DRAFT — ATTORNEY REVIEW REQUIRED (including state-specific execution verification)
 > Drafted from the intake answers and templates you provided. Does not verify accuracy, completeness, or your state's execution formalities (witnesses, notarization, self-proving affidavit), and does not determine which documents a client needs. You are the author of record — review, revise, verify state requirements, and finalize it yourself before your client signs anything.
 
+**MANDATORY — every single response in this conversation, not just the first:** open with the compliance header and close with the compliance footer shown in Step 4, copied exactly as written, never paraphrased or shortened. This applies to the first draft, every revision, every follow-up question — every message that touches this skill's output, with no exceptions.
+
 This skill populates up to four documents from one intake pass, using your firm's own template for each where you've attached one, or this plugin's generic placeholder template where you haven't:
 
 1. **Last Will and Testament** (basic)
@@ -123,6 +125,7 @@ Does this look right? You can:
 - Accept revision instructions and redraft as many times as needed, preserving cross-document consistency on every pass.
 - When the attorney confirms the set is correct, restate the final versions cleanly in their own blocks — still with no header/footer inside them.
 - Offer to draft any document type not yet requested for this client: "Want me to draft the [remaining document type(s)] for this client too?"
+- **Every one of these revision responses still opens with the compliance header and closes with the compliance footer from Step 4** — copied exactly, not paraphrased, not summarized away. A revision is not exempt just because it isn't the first draft.
 
 Do not mark a document set ready for execution until the attorney confirms it. Never notarize, file, record, submit, or schedule a signing ceremony — the attorney and client handle execution themselves, entirely outside this skill.
 
